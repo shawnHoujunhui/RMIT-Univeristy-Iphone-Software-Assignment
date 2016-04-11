@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>moviename</key>
+		<string>THE JUNGLE BOOK</string>
+		<key>time</key>
+		<string>2016-03-06T19:30:00Z</string>
+		<key>price</key>
+		<string>$10</string>
+	</dict>
+	<dict>
+		<key>moviename</key>
+		<string>THE HUNTSMAN: WINTER&apos;S WAR</string>
+		<key>time</key>
+		<string>2016-04-07T04:45:25Z</string>
+		<key>price</key>
+		<string>$36</string>
+	</dict>
+	<dict>
+		<key>moviename</key>
+		<string> CAPTAIN AMERICA: CIVIL WAR MOVIE</string>
+		<key>time</key>
+		<string>2016-02-25T17:30:00Z</string>
+		<key>price</key>
+		<string>$28</string>
+	</dict>
+	<dict>
+		<key>moviename</key>
+		<string>DEADPOOL</string>
+		<key>time</key>
+		<string>2016-01-31T20:30:00Z</string>
+		<key>price</key>
+		<string>$14</string>
+	</dict>
+</array>
+</plist>
