@@ -31,6 +31,10 @@
 		29CA46781CB52135008062E3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CA46771CB52135008062E3 /* SettingViewController.swift */; };
 		29CA467C1CB52189008062E3 /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CA467B1CB52189008062E3 /* TermsAndConditionsViewController.swift */; };
 		29CA467E1CB52193008062E3 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CA467D1CB52193008062E3 /* FeedbackViewController.swift */; };
+		29DE30DA1CD21B3400CE53FC /* MovieMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE30D91CD21B3400CE53FC /* MovieMainViewController.swift */; };
+		29DE30DC1CD21BF800CE53FC /* MovieShowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE30DB1CD21BF800CE53FC /* MovieShowingViewController.swift */; };
+		29DE30DE1CD21C0B00CE53FC /* MovieHotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE30DD1CD21C0B00CE53FC /* MovieHotViewController.swift */; };
+		29DE30E01CD21C1800CE53FC /* MovieComingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE30DF1CD21C1800CE53FC /* MovieComingViewController.swift */; };
 		29FEF9D41CB4FD8C00CC034A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEF9D31CB4FD8C00CC034A /* LoginViewController.swift */; };
 		29FEF9D61CB4FF9500CC034A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEF9D51CB4FF9500CC034A /* RegisterViewController.swift */; };
 		29FEF9D81CB504C900CC034A /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEF9D71CB504C900CC034A /* HomePageViewController.swift */; };
@@ -84,6 +88,10 @@
 		29CA46771CB52135008062E3 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		29CA467B1CB52189008062E3 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		29CA467D1CB52193008062E3 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		29DE30D91CD21B3400CE53FC /* MovieMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieMainViewController.swift; sourceTree = "<group>"; };
+		29DE30DB1CD21BF800CE53FC /* MovieShowingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieShowingViewController.swift; sourceTree = "<group>"; };
+		29DE30DD1CD21C0B00CE53FC /* MovieHotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieHotViewController.swift; sourceTree = "<group>"; };
+		29DE30DF1CD21C1800CE53FC /* MovieComingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieComingViewController.swift; sourceTree = "<group>"; };
 		29FEF9D31CB4FD8C00CC034A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		29FEF9D51CB4FF9500CC034A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		29FEF9D71CB504C900CC034A /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +143,10 @@
 		29966D221CB606CB00BC7734 /* MovieViewController */ = {
 			isa = PBXGroup;
 			children = (
+				29DE30D91CD21B3400CE53FC /* MovieMainViewController.swift */,
+				29DE30DB1CD21BF800CE53FC /* MovieShowingViewController.swift */,
+				29DE30DD1CD21C0B00CE53FC /* MovieHotViewController.swift */,
+				29DE30DF1CD21C1800CE53FC /* MovieComingViewController.swift */,
 			);
 			name = MovieViewController;
 			sourceTree = "<group>";
@@ -395,8 +407,11 @@
 			files = (
 				29FEF9D41CB4FD8C00CC034A /* LoginViewController.swift in Sources */,
 				291F42C11CB562F3007C2F61 /* HistoryMovieModel.swift in Sources */,
+				29DE30DE1CD21C0B00CE53FC /* MovieHotViewController.swift in Sources */,
 				29FEF9D61CB4FF9500CC034A /* RegisterViewController.swift in Sources */,
 				29966D211CB5F8DD00BC7734 /* HistoryViewController.swift in Sources */,
+				29DE30DA1CD21B3400CE53FC /* MovieMainViewController.swift in Sources */,
+				29DE30E01CD21C1800CE53FC /* MovieComingViewController.swift in Sources */,
 				29FEF9D81CB504C900CC034A /* HomePageViewController.swift in Sources */,
 				29CA467C1CB52189008062E3 /* TermsAndConditionsViewController.swift in Sources */,
 				299ABB721CB4F45D0045BF44 /* FirstViewController.swift in Sources */,
@@ -408,6 +423,7 @@
 				29CA46761CB5174B008062E3 /* ForgetDetailsViewController.swift in Sources */,
 				29CA46741CB51279008062E3 /* PersonalDetailsViewController.swift in Sources */,
 				291F42C81CB56418007C2F61 /* HistoryMovieTableViewCell.swift in Sources */,
+				29DE30DC1CD21BF800CE53FC /* MovieShowingViewController.swift in Sources */,
 				291032B41CB676B40069C8A6 /* PersonalDetailsInfoProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

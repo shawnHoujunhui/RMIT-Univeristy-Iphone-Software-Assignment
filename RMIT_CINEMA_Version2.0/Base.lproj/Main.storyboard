@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lpF-3h-mp0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uu9-Ob-T9q">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -378,12 +378,117 @@
             </objects>
             <point key="canvasLocation" x="2854" y="369"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vjN-gu-dqz">
+            <objects>
+                <navigationController id="uu9-Ob-T9q" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="LVK-82-L6l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0eL-2P-jU9" kind="relationship" relationship="rootViewController" id="eUY-uR-220"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="he3-Gm-oVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2854" y="1309"/>
+        </scene>
+        <!--Movie Showing View Controller-->
+        <scene sceneID="0hv-IU-v1H">
+            <objects>
+                <viewController storyboardIdentifier="MovieShowingViewController" id="cMs-3p-qht" customClass="MovieShowingViewController" customModule="RMIT_CINEMA_Version2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YFr-Eh-w9d"/>
+                        <viewControllerLayoutGuide type="bottom" id="gFg-vM-sBF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t2B-GY-uVL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pgC-gh-yAt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2854" y="2035"/>
+        </scene>
+        <!--Movie Main View Controller-->
+        <scene sceneID="qfs-NG-ccY">
+            <objects>
+                <viewController storyboardIdentifier="MovieMainViewController" id="0eL-2P-jU9" customClass="MovieMainViewController" customModule="RMIT_CINEMA_Version2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m1l-ko-zoL"/>
+                        <viewControllerLayoutGuide type="bottom" id="IXi-Os-MSV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="97L-ML-G4a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hLP-pH-a7e">
+                        <barButtonItem key="leftBarButtonItem" image="homebuttonsmall" style="plain" id="3Fz-uy-qsk">
+                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
+                            <color key="tintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="dPy-BW-5MG">
+                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-10" maxY="5"/>
+                            <color key="tintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <segue destination="cMs-3p-qht" kind="show" id="V9C-cP-rmu"/>
+                        <segue destination="y9i-1T-jaL" kind="show" id="fav-Fb-gKM"/>
+                        <segue destination="ymP-9U-Yhw" kind="show" id="crr-u9-ZaY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GS0-cW-kZt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3635" y="1309"/>
+        </scene>
+        <!--Movie Hot View Controller-->
+        <scene sceneID="Y6m-Uz-QSR">
+            <objects>
+                <viewController storyboardIdentifier="MovieHotViewController" id="y9i-1T-jaL" customClass="MovieHotViewController" customModule="RMIT_CINEMA_Version2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mTY-lh-YAA"/>
+                        <viewControllerLayoutGuide type="bottom" id="0VE-eJ-lSn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bRy-fA-x46">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qPw-Rf-RbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3635" y="2035"/>
+        </scene>
+        <!--Movie Coming View Controller-->
+        <scene sceneID="Xrv-XD-ECS">
+            <objects>
+                <viewController storyboardIdentifier="MovieComingViewController" id="ymP-9U-Yhw" customClass="MovieComingViewController" customModule="RMIT_CINEMA_Version2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wCY-qR-o0P"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pkc-bE-PpE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kwQ-Jz-WxO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HZd-nK-e3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4383" y="2035"/>
+        </scene>
         <!--HelpPageTabBarViewController-->
         <scene sceneID="Soq-Qu-djp">
             <objects>
                 <tabBarController storyboardIdentifier="HelpPageViewController" title="HelpPageTabBarViewController" id="lpF-3h-mp0" customClass="HelpPageViewController" customModule="RMIT_CINEMA_Version2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gPb-XN-RsO"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="YSz-PR-sBS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -900,6 +1005,7 @@
         <image name="Settings1" width="87" height="87"/>
         <image name="help" width="258" height="264"/>
         <image name="homebutton" width="86" height="86"/>
+        <image name="homebuttonsmall" width="30" height="30"/>
         <image name="rmitcinema" width="262" height="258"/>
     </resources>
     <inferredMetricsTieBreakers>
