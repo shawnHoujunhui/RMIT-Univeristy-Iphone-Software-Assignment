@@ -63,32 +63,16 @@ class MovieMainViewController: UIViewController {
         let hotButton = UIButton(type: .Custom)
         
         hotButton.frame = CGRectMake(self.view.frame.width/2 - 50, 100, 100, 100)
-        hotButton.selected = true
-        hotButton.titleLabel?.font = UIFont.systemFontOfSize(10.0)
-        hotButton.setTitle("Now Showing", forState: .Normal)
-        hotButton.setTitleColor(unSelectedColor, forState:.Normal)
-        hotButton.setTitleColor(selectedColor, forState: .Selected)
-        hotButton.addTarget(self, action: "didClickSelectButton:", forControlEvents: .TouchUpInside)
-        hotButton.tag = 0
+        self.setButtonAttr(hotButton, buttonText: "Now Showing", tagNum: 0)
         currentTag = hotButton.tag
         titleView.addSubview(hotButton)
         
         let latestButton = UIButton(type: .Custom)
-        latestButton.setTitle("What's Hot", forState: .Normal)
-        latestButton.titleLabel?.font = UIFont.systemFontOfSize(10.0)
-        latestButton.setTitleColor(unSelectedColor, forState: .Normal)
-        latestButton.setTitleColor(selectedColor, forState: .Selected)
-        latestButton.addTarget(self, action: "didClickSelectButton:", forControlEvents: .TouchUpInside)
-        latestButton.tag = 1
+        self.setButtonAttr(latestButton, buttonText: "What's Hot", tagNum: 1)
         titleView.addSubview(latestButton)
         
         let attentionButton = UIButton(type: .Custom)
-        attentionButton.titleLabel?.font = UIFont.systemFontOfSize(10.0)
-        attentionButton.setTitle("Coming Soon", forState: .Normal)
-        attentionButton.setTitleColor(unSelectedColor, forState: .Normal)
-        attentionButton.setTitleColor(selectedColor, forState: .Selected)
-        attentionButton.addTarget(self, action: "didClickSelectButton:", forControlEvents: .TouchUpInside)
-        attentionButton.tag = 2
+        self.setButtonAttr(attentionButton, buttonText: "Comming Soon", tagNum: 2)
         titleView.addSubview(attentionButton)
         
         // x location
@@ -126,6 +110,16 @@ class MovieMainViewController: UIViewController {
         titleView.setNeedsUpdateConstraints()
         
         self.navigationItem.titleView = titleView
+    }
+    
+    func setButtonAttr(targetButton:UIButton, buttonText:String, tagNum:Int){
+        targetButton.titleLabel?.font = UIFont.systemFontOfSize(10.0)
+        targetButton.setTitle(buttonText, forState: .Normal)
+        targetButton.setTitleColor(unSelectedColor, forState: .Normal)
+        targetButton.setTitleColor(selectedColor, forState: .Selected)
+        //targetButton.addTarget(self, action: "didClickSelectButton:", forControlEvents: .TouchUpInside)
+        targetButton.addTarget(self, action: #selector(MovieMainViewController.didClickSelectButton(_:)), forControlEvents: .TouchUpInside)
+        targetButton.tag = tagNum
     }
     
     func setupChildViewControllers(){
