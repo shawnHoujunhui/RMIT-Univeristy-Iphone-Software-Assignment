@@ -68,7 +68,7 @@ class MovieMainViewController: UIViewController {
         hotButton.setTitle("Now Showing", forState: .Normal)
         hotButton.setTitleColor(unSelectedColor, forState:.Normal)
         hotButton.setTitleColor(selectedColor, forState: .Selected)
-        hotButton.addTarget(self, action: "didClickSelectButton:", forControlEvents: .TouchUpInside)
+        hotButton.addTarget(self, action: #selector(MovieMainViewController.didClickSelectButton(_:)), forControlEvents: .TouchUpInside)
         hotButton.tag = 0
         currentTag = hotButton.tag
         titleView.addSubview(hotButton)
@@ -78,7 +78,7 @@ class MovieMainViewController: UIViewController {
         latestButton.titleLabel?.font = UIFont.systemFontOfSize(10.0)
         latestButton.setTitleColor(unSelectedColor, forState: .Normal)
         latestButton.setTitleColor(selectedColor, forState: .Selected)
-        latestButton.addTarget(self, action: "didClickSelectButton:", forControlEvents: .TouchUpInside)
+        latestButton.addTarget(self, action: #selector(MovieMainViewController.didClickSelectButton(_:)), forControlEvents: .TouchUpInside)
         latestButton.tag = 1
         titleView.addSubview(latestButton)
         
@@ -87,7 +87,7 @@ class MovieMainViewController: UIViewController {
         attentionButton.setTitle("Coming Soon", forState: .Normal)
         attentionButton.setTitleColor(unSelectedColor, forState: .Normal)
         attentionButton.setTitleColor(selectedColor, forState: .Selected)
-        attentionButton.addTarget(self, action: "didClickSelectButton:", forControlEvents: .TouchUpInside)
+        attentionButton.addTarget(self, action: #selector(MovieMainViewController.didClickSelectButton(_:)), forControlEvents: .TouchUpInside)
         attentionButton.tag = 2
         titleView.addSubview(attentionButton)
         

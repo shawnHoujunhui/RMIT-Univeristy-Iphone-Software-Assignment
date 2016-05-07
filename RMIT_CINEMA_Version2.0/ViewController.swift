@@ -6,7 +6,7 @@
 //  Copyright © 2016 RMIT-JunHui Hou. All rights reserved.
 //
 import UIKit
-
+import CoreData
 
 // extension function for UIButton
 extension UIButton {
@@ -46,7 +46,7 @@ extension UITextField {
 }
 
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class ViewController: UIViewController, UIScrollViewDelegate{
     var scrollView = UIScrollView()
     
     var pageControl = UIPageControl()
