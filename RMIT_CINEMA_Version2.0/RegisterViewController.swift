@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 
-
-class RegisterViewController: UIViewController, UITextFieldDelegate {
-    
+class RegisterViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
+   
+    var results: NSArray?
     
     @IBOutlet weak var firstnameTextField: UITextField!
     @IBOutlet weak var lastnameTextField: UITextField!
@@ -21,6 +22,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var joinButton: UIButton!
     // Store personal details
    
+    @IBOutlet weak var table: UITableView!
     
     // This is called when the user tap the return button on the keyborad
     // Once we tap the return of keyborad, the keyboard will be dismissed
@@ -53,6 +55,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadTable() //start load
         // ser the text fields delegate
         firstnameTextField.delegate = self
         lastnameTextField.delegate = self
@@ -64,11 +67,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.joinButton.disable()
         // Do any additional setup after loading the view.
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+ 
     
     
     //  Checking the content of textfield
@@ -88,23 +87,31 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     let EmailAddress = ""
     @IBAction func joinButtonAction(sender: AnyObject) {
         
+        // coredata details
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        let cell = NSEntityDescription.insertNewObjectForEntityForName("Form", inManagedObjectContext:  context)
+        cell.setValue(firstnameTextField.text, forKey: "firstname")
+        cell.setValue(lastnameTextField.text, forKey: "lastname")
+        cell.setValue(emailAddressTextField.text, forKey: "emailaddress")
+        cell.setValue(passwordTextField.text, forKey: "password")
+      
+        
         if self.firstnameTextField.validateFirstName() && self.lastnameTextField.validateLastName() && self.emailAddressTextField.validateEmail() &&
             self.passwordTextField.validatePassword() && self.confirmPasswordTextField.validatePassword(){
             let homeButton = UIStoryboard(name: "Main", bundle: nil)
             let home2 = homeButton.instantiateViewControllerWithIdentifier("HomePageViewController")
             self.presentViewController(home2, animated: true, completion: nil)
             
-            
-            // Warning - Not working now
-            // store info
-            // create user info
-            // set the store information
-            NSUserDefaults.standardUserDefaults().setObject(self.firstnameTextField.text, forKey: "FirstName")
-            NSUserDefaults.standardUserDefaults().setObject(self.lastnameTextField.text, forKey: "LastName")
-            NSUserDefaults.standardUserDefaults().setObject(self.emailAddressTextField.text, forKey: "EmailAddress")
-            //set synchronization
-            NSUserDefaults.standardUserDefaults().synchronize()
-            
+            // save the context
+            do{
+                try context.save()
+            }catch{
+                
+            }
+            self.loadTable()
+            self.table.reloadData()
+         
             
             
             
@@ -133,7 +140,42 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.presentViewController(alc, animated: true, completion: nil)
     }
     
+
+    //MARK: - Tableview Delegate & Datasource
+    func tableView(tableView:UITableView, numberOfRowsInSection section:Int) -> Int
+    {
+        return results!.count
+    }
     
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: nil)
+        let aux = results![indexPath.row] as! NSManagedObject
+        cell.textLabel!.text = aux.valueForKey("firstname") as? String
+        cell.textLabel!.text = aux.valueForKey("lastname") as? String
+        cell.detailTextLabel!.text = aux.valueForKey("password") as? String
+        cell.detailTextLabel!.text = aux.valueForKey("emailaddress") as? String
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?  {
+        return "Contacts"
+    }
+    
+    func loadTable(){
+        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context:NSManagedObjectContext = appDel.managedObjectContext
+        let request = NSFetchRequest(entityName: "Form")
+        request.returnsObjectsAsFaults = false
+        results = try? context.executeFetchRequest(request)
+    }
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     /*
      // MARK: - Navigation
      

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uu9-Ob-T9q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cMs-3p-qht">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -277,9 +277,18 @@
                                     <action selector="joinButtonAction:" destination="cfw-K0-TRo" eventType="touchUpInside" id="MKC-ip-oxE"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="na7-Uf-9h8">
+                                <rect key="frame" x="0.0" y="577" width="600" height="23"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cfw-K0-TRo" id="je3-5y-D3n"/>
+                                    <outlet property="delegate" destination="cfw-K0-TRo" id="LkA-hk-wtG"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="na7-Uf-9h8" firstAttribute="leading" secondItem="rBA-bl-Urr" secondAttribute="leadingMargin" constant="-20" id="52s-Us-htT"/>
                             <constraint firstItem="GlZ-wD-XPy" firstAttribute="top" secondItem="y04-Jx-9ew" secondAttribute="bottom" constant="5" id="5WH-1m-IXq"/>
                             <constraint firstItem="JBX-He-kef" firstAttribute="top" secondItem="ipU-HL-Nee" secondAttribute="bottom" constant="5" id="7e3-uc-6Ji"/>
                             <constraint firstItem="ohb-UB-xjq" firstAttribute="top" secondItem="9VE-cN-Tgk" secondAttribute="bottom" constant="5" id="AXr-a7-opR"/>
@@ -291,8 +300,11 @@
                             <constraint firstItem="u2N-DA-YaK" firstAttribute="top" secondItem="ohb-UB-xjq" secondAttribute="bottom" constant="5" id="Lyo-yK-cwT"/>
                             <constraint firstItem="oel-Dn-9in" firstAttribute="top" secondItem="JBX-He-kef" secondAttribute="bottom" constant="5" id="M0i-Ek-hKD"/>
                             <constraint firstItem="JBX-He-kef" firstAttribute="top" secondItem="u2N-DA-YaK" secondAttribute="bottom" constant="5" id="N9w-oz-Mpo"/>
+                            <constraint firstItem="na7-Uf-9h8" firstAttribute="top" secondItem="GlZ-wD-XPy" secondAttribute="bottom" constant="8" id="NDW-nk-Jcg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oel-Dn-9in" secondAttribute="trailing" id="PNN-4e-rae"/>
+                            <constraint firstItem="xJ1-eO-Taj" firstAttribute="top" secondItem="na7-Uf-9h8" secondAttribute="bottom" id="a4J-Xg-mT2"/>
                             <constraint firstItem="GlZ-wD-XPy" firstAttribute="width" secondItem="ktz-cc-5n4" secondAttribute="width" id="asG-zs-lYd"/>
+                            <constraint firstItem="na7-Uf-9h8" firstAttribute="top" secondItem="ktz-cc-5n4" secondAttribute="bottom" constant="8" id="bM8-hp-IHm"/>
                             <constraint firstItem="y04-Jx-9ew" firstAttribute="top" secondItem="oel-Dn-9in" secondAttribute="bottom" constant="5" id="cI8-Vx-CDm"/>
                             <constraint firstAttribute="leadingMargin" secondItem="GlZ-wD-XPy" secondAttribute="leading" id="ceJ-gg-6bq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ktz-cc-5n4" secondAttribute="trailing" id="eeG-wM-YBy"/>
@@ -302,6 +314,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="y04-Jx-9ew" secondAttribute="leading" id="il2-O9-Gk3"/>
                             <constraint firstItem="ipU-HL-Nee" firstAttribute="width" secondItem="u2N-DA-YaK" secondAttribute="width" id="uNe-Ri-NrQ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="oel-Dn-9in" secondAttribute="leading" id="vl2-kh-sTX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="na7-Uf-9h8" secondAttribute="trailing" constant="-20" id="vzR-Ws-UHe"/>
                             <constraint firstItem="ohb-UB-xjq" firstAttribute="centerX" secondItem="rBA-bl-Urr" secondAttribute="centerX" id="wj1-v8-GoE"/>
                             <constraint firstItem="ktz-cc-5n4" firstAttribute="top" secondItem="y04-Jx-9ew" secondAttribute="bottom" constant="5" id="x9W-kk-aoB"/>
                         </constraints>
@@ -313,6 +326,7 @@
                         <outlet property="joinButton" destination="ktz-cc-5n4" id="DnX-4u-grq"/>
                         <outlet property="lastnameTextField" destination="ipU-HL-Nee" id="4T1-Fi-dag"/>
                         <outlet property="passwordTextField" destination="oel-Dn-9in" id="6j3-bU-vdk"/>
+                        <outlet property="table" destination="na7-Uf-9h8" id="ifj-3a-052"/>
                         <segue destination="oUU-wy-uJl" kind="show" id="CCS-CM-ZVS"/>
                     </connections>
                 </viewController>
@@ -406,8 +420,21 @@
                     <view key="view" contentMode="scaleToFill" id="t2B-GY-uVL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Cell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dRM-qw-8Zp">
+                                <rect key="frame" x="20" y="147" width="560" height="381"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cMs-3p-qht" id="5sE-Wv-Jbw"/>
+                                    <outlet property="delegate" destination="cMs-3p-qht" id="rpd-46-XVx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="table" destination="dRM-qw-8Zp" id="fNS-pj-ydV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgC-gh-yAt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -458,7 +485,7 @@
                     <view key="view" contentMode="scaleToFill" id="bRy-fA-x46">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.65169774150000004" blue="0.2069199987" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPw-Rf-RbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -476,7 +503,7 @@
                     <view key="view" contentMode="scaleToFill" id="kwQ-Jz-WxO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZd-nK-e3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1009,7 +1036,7 @@
         <image name="rmitcinema" width="262" height="258"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aVb-yz-WVp"/>
+        <segue reference="CCS-CM-ZVS"/>
         <segue reference="WRC-el-mvg"/>
     </inferredMetricsTieBreakers>
 </document>

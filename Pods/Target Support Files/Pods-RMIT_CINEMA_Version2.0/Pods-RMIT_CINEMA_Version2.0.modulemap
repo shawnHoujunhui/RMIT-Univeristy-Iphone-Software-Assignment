@@ -1,0 +1,6 @@
+framework module Pods_RMIT_CINEMA_Version2_0 {
+  umbrella header "Pods-RMIT_CINEMA_Version2.0-umbrella.h"
+
+  export *
+  module * { export * }
+}

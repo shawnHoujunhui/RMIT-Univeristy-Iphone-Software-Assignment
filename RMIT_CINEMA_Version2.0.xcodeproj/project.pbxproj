@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28E5C09F3186304627D5CD2A /* Pods_RMIT_CINEMA_Version2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F50454A96FA79CEF6223DFC /* Pods_RMIT_CINEMA_Version2_0.framework */; };
 		291032B41CB676B40069C8A6 /* PersonalDetailsInfoProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291032B31CB676B40069C8A6 /* PersonalDetailsInfoProcessor.swift */; };
 		291D3D1A1CB7AAEE00427326 /* LoginPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291D3D191CB7AAEE00427326 /* LoginPageUITests.swift */; };
 		291D3D1C1CB7ADBA00427326 /* RegisterPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291D3D1B1CB7ADBA00427326 /* RegisterPageUITests.swift */; };
@@ -14,6 +15,8 @@
 		291F42C11CB562F3007C2F61 /* HistoryMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F42C01CB562F3007C2F61 /* HistoryMovieModel.swift */; };
 		291F42C81CB56418007C2F61 /* HistoryMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F42C61CB56418007C2F61 /* HistoryMovieTableViewCell.swift */; };
 		291F42C91CB56418007C2F61 /* HistoryMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291F42C71CB56418007C2F61 /* HistoryMovieTableViewCell.xib */; };
+		292C191F1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 292C191D1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodeld */; };
+		292C19221CDD76BF00D342FA /* RegisterData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 292C19201CDD76BF00D342FA /* RegisterData.xcdatamodeld */; };
 		29966D211CB5F8DD00BC7734 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29966D201CB5F8DD00BC7734 /* HistoryViewController.swift */; };
 		299ABB421CB4E9E90045BF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299ABB411CB4E9E90045BF44 /* AppDelegate.swift */; };
 		299ABB441CB4E9E90045BF44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299ABB431CB4E9E90045BF44 /* ViewController.swift */; };
@@ -38,6 +41,9 @@
 		29FEF9D41CB4FD8C00CC034A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEF9D31CB4FD8C00CC034A /* LoginViewController.swift */; };
 		29FEF9D61CB4FF9500CC034A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEF9D51CB4FF9500CC034A /* RegisterViewController.swift */; };
 		29FEF9D81CB504C900CC034A /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEF9D71CB504C900CC034A /* HomePageViewController.swift */; };
+		3A45C8271CDF51900006EE71 /* AccessRemoteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A45C8261CDF51900006EE71 /* AccessRemoteInfo.swift */; };
+		3A8D7B2C1CDFB09000F78B91 /* MovieInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D7B2A1CDFB09000F78B91 /* MovieInfo+CoreDataProperties.swift */; };
+		3A8D7B2D1CDFB09000F78B91 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D7B2B1CDFB09000F78B91 /* MovieInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,8 @@
 		291F42C01CB562F3007C2F61 /* HistoryMovieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryMovieModel.swift; sourceTree = "<group>"; };
 		291F42C61CB56418007C2F61 /* HistoryMovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryMovieTableViewCell.swift; sourceTree = "<group>"; };
 		291F42C71CB56418007C2F61 /* HistoryMovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryMovieTableViewCell.xib; sourceTree = "<group>"; };
+		292C191E1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RMIT_CINEMA_Version2.xcdatamodel; sourceTree = "<group>"; };
+		292C19211CDD76BF00D342FA /* RegisterData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RegisterData.xcdatamodel; sourceTree = "<group>"; };
 		29966D201CB5F8DD00BC7734 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		299ABB3E1CB4E9E90045BF44 /* RMIT_CINEMA_Version2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMIT_CINEMA_Version2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		299ABB411CB4E9E90045BF44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +103,12 @@
 		29FEF9D31CB4FD8C00CC034A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		29FEF9D51CB4FF9500CC034A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		29FEF9D71CB504C900CC034A /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		2F50454A96FA79CEF6223DFC /* Pods_RMIT_CINEMA_Version2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMIT_CINEMA_Version2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36CF3F69758C4277D229C355 /* Pods-RMIT_CINEMA_Version2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMIT_CINEMA_Version2.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RMIT_CINEMA_Version2.0/Pods-RMIT_CINEMA_Version2.0.debug.xcconfig"; sourceTree = "<group>"; };
+		3A45C8261CDF51900006EE71 /* AccessRemoteInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessRemoteInfo.swift; sourceTree = "<group>"; };
+		3A8D7B2A1CDFB09000F78B91 /* MovieInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MovieInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3A8D7B2B1CDFB09000F78B91 /* MovieInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
+		89DF509EA981FAEC4FF9FA86 /* Pods-RMIT_CINEMA_Version2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMIT_CINEMA_Version2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-RMIT_CINEMA_Version2.0/Pods-RMIT_CINEMA_Version2.0.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28E5C09F3186304627D5CD2A /* Pods_RMIT_CINEMA_Version2_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +151,9 @@
 			children = (
 				291F42B81CB55ED0007C2F61 /* MovieHistoryList.plist */,
 				291F42C01CB562F3007C2F61 /* HistoryMovieModel.swift */,
+				3A45C8261CDF51900006EE71 /* AccessRemoteInfo.swift */,
+				3A8D7B2A1CDFB09000F78B91 /* MovieInfo+CoreDataProperties.swift */,
+				3A8D7B2B1CDFB09000F78B91 /* MovieInfo.swift */,
 			);
 			name = MovieDetailsModel;
 			sourceTree = "<group>";
@@ -158,6 +176,8 @@
 				299ABB551CB4E9EA0045BF44 /* RMIT_CINEMA_Version2.0Tests */,
 				299ABB601CB4E9EA0045BF44 /* RMIT_CINEMA_Version2.0UITests */,
 				299ABB3F1CB4E9E90045BF44 /* Products */,
+				90DE89F3CAF62D96FC895B01 /* Pods */,
+				6A17FEC7EF4D0C104255CF9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,6 +202,8 @@
 				299ABB481CB4E9E90045BF44 /* Assets.xcassets */,
 				299ABB4A1CB4E9E90045BF44 /* LaunchScreen.storyboard */,
 				299ABB4D1CB4E9E90045BF44 /* Info.plist */,
+				292C191D1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodeld */,
+				292C19201CDD76BF00D342FA /* RegisterData.xcdatamodeld */,
 			);
 			path = RMIT_CINEMA_Version2.0;
 			sourceTree = "<group>";
@@ -269,6 +291,23 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		6A17FEC7EF4D0C104255CF9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F50454A96FA79CEF6223DFC /* Pods_RMIT_CINEMA_Version2_0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90DE89F3CAF62D96FC895B01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				36CF3F69758C4277D229C355 /* Pods-RMIT_CINEMA_Version2.0.debug.xcconfig */,
+				89DF509EA981FAEC4FF9FA86 /* Pods-RMIT_CINEMA_Version2.0.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,9 +315,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 299ABB661CB4E9EA0045BF44 /* Build configuration list for PBXNativeTarget "RMIT_CINEMA_Version2.0" */;
 			buildPhases = (
+				F0BC505320B8B29617F02E0F /* Check Pods Manifest.lock */,
 				299ABB3A1CB4E9E90045BF44 /* Sources */,
 				299ABB3B1CB4E9E90045BF44 /* Frameworks */,
 				299ABB3C1CB4E9E90045BF44 /* Resources */,
+				D215E9420C72EE968CE83C74 /* Embed Pods Frameworks */,
+				9DBA484BF2A36EC263BE38BC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -400,6 +442,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9DBA484BF2A36EC263BE38BC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RMIT_CINEMA_Version2.0/Pods-RMIT_CINEMA_Version2.0-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D215E9420C72EE968CE83C74 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RMIT_CINEMA_Version2.0/Pods-RMIT_CINEMA_Version2.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0BC505320B8B29617F02E0F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		299ABB3A1CB4E9E90045BF44 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -409,6 +499,9 @@
 				291F42C11CB562F3007C2F61 /* HistoryMovieModel.swift in Sources */,
 				29DE30DE1CD21C0B00CE53FC /* MovieHotViewController.swift in Sources */,
 				29FEF9D61CB4FF9500CC034A /* RegisterViewController.swift in Sources */,
+				3A8D7B2C1CDFB09000F78B91 /* MovieInfo+CoreDataProperties.swift in Sources */,
+				292C19221CDD76BF00D342FA /* RegisterData.xcdatamodeld in Sources */,
+				3A8D7B2D1CDFB09000F78B91 /* MovieInfo.swift in Sources */,
 				29966D211CB5F8DD00BC7734 /* HistoryViewController.swift in Sources */,
 				29DE30DA1CD21B3400CE53FC /* MovieMainViewController.swift in Sources */,
 				29DE30E01CD21C1800CE53FC /* MovieComingViewController.swift in Sources */,
@@ -421,6 +514,8 @@
 				29CA46721CB51215008062E3 /* HelpPageViewController.swift in Sources */,
 				299ABB421CB4E9E90045BF44 /* AppDelegate.swift in Sources */,
 				29CA46761CB5174B008062E3 /* ForgetDetailsViewController.swift in Sources */,
+				292C191F1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodeld in Sources */,
+				3A45C8271CDF51900006EE71 /* AccessRemoteInfo.swift in Sources */,
 				29CA46741CB51279008062E3 /* PersonalDetailsViewController.swift in Sources */,
 				291F42C81CB56418007C2F61 /* HistoryMovieTableViewCell.swift in Sources */,
 				29DE30DC1CD21BF800CE53FC /* MovieShowingViewController.swift in Sources */,
@@ -570,6 +665,7 @@
 		};
 		299ABB671CB4E9EA0045BF44 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36CF3F69758C4277D229C355 /* Pods-RMIT_CINEMA_Version2.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RMIT_CINEMA_Version2.0/Info.plist;
@@ -581,6 +677,7 @@
 		};
 		299ABB681CB4E9EA0045BF44 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89DF509EA981FAEC4FF9FA86 /* Pods-RMIT_CINEMA_Version2.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RMIT_CINEMA_Version2.0/Info.plist;
@@ -676,6 +773,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		292C191D1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				292C191E1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodel */,
+			);
+			currentVersion = 292C191E1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodel */;
+			path = RMIT_CINEMA_Version2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		292C19201CDD76BF00D342FA /* RegisterData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				292C19211CDD76BF00D342FA /* RegisterData.xcdatamodel */,
+			);
+			currentVersion = 292C19211CDD76BF00D342FA /* RegisterData.xcdatamodel */;
+			path = RegisterData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 299ABB361CB4E9E90045BF44 /* Project object */;
 }
