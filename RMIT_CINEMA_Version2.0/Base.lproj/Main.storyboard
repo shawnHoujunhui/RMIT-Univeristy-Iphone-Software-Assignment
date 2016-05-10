@@ -567,6 +567,7 @@
                     <keyCommands/>
                     <connections>
                         <outlet property="table" destination="dRM-qw-8Zp" id="fNS-pj-ydV"/>
+                        <segue destination="7JP-2v-aIi" kind="show" identifier="showMovieDetails" id="8RW-zG-3k0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgC-gh-yAt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -747,7 +748,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.65169774150000004" blue="0.2069199987" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="AUw-Wu-xRJ" secondAttribute="trailing" constant="-20" id="Eho-aW-FMH"/>
                             <constraint firstItem="AUw-Wu-xRJ" firstAttribute="top" secondItem="mTY-lh-YAA" secondAttribute="bottom" constant="-64" id="dFQ-Vz-3Cm"/>
@@ -762,6 +763,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPw-Rf-RbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3635" y="2035"/>
+        </scene>
+        <!--Show Movie Details View Controller-->
+        <scene sceneID="7NP-qN-1rv">
+            <objects>
+                <viewController id="7JP-2v-aIi" customClass="ShowMovieDetailsViewController" customModule="RMIT_CINEMA_Version2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4l0-De-hRB"/>
+                        <viewControllerLayoutGuide type="bottom" id="h4b-Ef-E3Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qig-Hu-Fck">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Do7-Mv-mDE">
+                                <rect key="frame" x="200" y="72" width="370" height="173"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmY-a9-ekB">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cp9-My-DYw">
+                                        <rect key="frame" x="0.0" y="31" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIo-cF-zY2">
+                                        <rect key="frame" x="0.0" y="61" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7Q-b2-jMJ">
+                                        <rect key="frame" x="0.0" y="92" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyq-xX-qC6">
+                                        <rect key="frame" x="0.0" y="122" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZi-3Q-tlH">
+                                        <rect key="frame" x="0.0" y="153" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MSY-bc-VlI">
+                                <rect key="frame" x="31" y="72" width="155" height="173"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Settings1" translatesAutoresizingMaskIntoConstraints="NO" id="9Om-Vs-F07">
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="173"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="173" id="N8S-lo-cDg"/>
+                                            <constraint firstAttribute="width" constant="155" id="bAg-Ya-K0K"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Do7-Mv-mDE" secondAttribute="trailing" constant="10" id="5Uk-9I-WHq"/>
+                            <constraint firstItem="Do7-Mv-mDE" firstAttribute="top" secondItem="4l0-De-hRB" secondAttribute="bottom" constant="8" id="CpY-Tx-EAG"/>
+                            <constraint firstItem="Do7-Mv-mDE" firstAttribute="leading" secondItem="Qig-Hu-Fck" secondAttribute="leadingMargin" constant="180" id="Ddl-XX-9Ym"/>
+                            <constraint firstItem="Do7-Mv-mDE" firstAttribute="leading" secondItem="MSY-bc-VlI" secondAttribute="trailing" constant="14" id="NEp-pM-AF6"/>
+                            <constraint firstItem="MSY-bc-VlI" firstAttribute="top" secondItem="4l0-De-hRB" secondAttribute="bottom" constant="8" id="Y4e-u0-jTq"/>
+                            <constraint firstItem="MSY-bc-VlI" firstAttribute="leading" secondItem="Qig-Hu-Fck" secondAttribute="leadingMargin" constant="11" id="c5K-Cg-Zgu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mcompany" destination="lyq-xX-qC6" id="zWL-f8-mQJ"/>
+                        <outlet property="mgenre" destination="m7Q-b2-jMJ" id="Xh4-KI-PtQ"/>
+                        <outlet property="mreleasedate" destination="wmY-a9-ekB" id="cMi-3c-9hT"/>
+                        <outlet property="mrunningtime" destination="rIo-cF-zY2" id="Be9-Gm-XU7"/>
+                        <outlet property="mstatus" destination="vZi-3Q-tlH" id="iO8-Uu-UQW"/>
+                        <outlet property="mtitle" destination="cp9-My-DYw" id="M7H-L7-K9V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="46m-BJ-k5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3223" y="2929"/>
         </scene>
         <!--Movie Coming View Controller-->
         <scene sceneID="Xrv-XD-ECS">
@@ -897,7 +987,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="cG0-HT-o7k" firstAttribute="top" secondItem="wCY-qR-o0P" secondAttribute="bottom" constant="-64" id="6Jg-yn-oSy"/>
                             <constraint firstItem="Pkc-bE-PpE" firstAttribute="top" secondItem="cG0-HT-o7k" secondAttribute="bottom" id="Iaz-Jh-JiI"/>

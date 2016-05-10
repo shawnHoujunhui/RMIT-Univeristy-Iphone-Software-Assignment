@@ -185,11 +185,13 @@ class MovieComingViewController: UIViewController, UITextFieldDelegate, UITableV
                             let value = details.result.value
                             let details = JSON(value!)
                             var genres = ""
-                            for i in 0...details["genres"].count - 1{
-                                genres += details["genres"][i]["name"].rawString()!
-                                genres += ","
+                            if(details["genres"].count>0){
+                                for i in 0...details["genres"].count - 1{
+                                    genres += details["genres"][i]["name"].rawString()!
+                                    genres += ","
                             }
-                            genres.removeAtIndex(genres.endIndex.predecessor())
+                                genres.removeAtIndex(genres.endIndex.predecessor())
+                            }
                             var production_countries = ""
                             if(details["production_countries"].count > 0){
                                 for m in 0...details["production_countries"].count - 1{
