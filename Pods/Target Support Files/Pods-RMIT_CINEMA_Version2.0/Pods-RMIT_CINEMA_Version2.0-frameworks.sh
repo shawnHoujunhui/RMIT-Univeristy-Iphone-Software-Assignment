@@ -85,7 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-RMIT_CINEMA_Version2.0/Alamofire.framework"
+  install_framework "Pods-RMIT_CINEMA_Version2.0/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-RMIT_CINEMA_Version2.0/Alamofire.framework"
+  install_framework "Pods-RMIT_CINEMA_Version2.0/SwiftyJSON.framework"
 fi

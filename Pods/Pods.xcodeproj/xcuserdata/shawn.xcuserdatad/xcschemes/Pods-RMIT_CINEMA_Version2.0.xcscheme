@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C4ADDF224F21D9AB31561394'
+               BlueprintIdentifier = '4BD43AF491229CBA77BBC6DB'
                BlueprintName = 'Pods-RMIT_CINEMA_Version2.0'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_RMIT_CINEMA_Version2_0.framework'>

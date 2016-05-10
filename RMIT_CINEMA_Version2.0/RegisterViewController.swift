@@ -11,7 +11,7 @@ import CoreData
 
 
 class RegisterViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
-    
+   
     var results: NSArray?
     
     @IBOutlet weak var firstnameTextField: UITextField!
@@ -158,6 +158,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UITableView
         cell.detailTextLabel!.text = aux.valueForKey("emailaddress") as? String
         return cell
     }
+    
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?  {
         return "Contacts"
     }
