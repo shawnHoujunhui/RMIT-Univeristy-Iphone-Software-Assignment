@@ -39,6 +39,8 @@
 		29DE30DC1CD21BF800CE53FC /* MovieShowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE30DB1CD21BF800CE53FC /* MovieShowingViewController.swift */; };
 		29DE30DE1CD21C0B00CE53FC /* MovieHotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE30DD1CD21C0B00CE53FC /* MovieHotViewController.swift */; };
 		29DE30E01CD21C1800CE53FC /* MovieComingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE30DF1CD21C1800CE53FC /* MovieComingViewController.swift */; };
+		29E275541CE1A3DD002D3E4A /* MovieHotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E275531CE1A3DD002D3E4A /* MovieHotTableViewCell.swift */; };
+		29E275561CE1A96E002D3E4A /* MovieComingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E275551CE1A96E002D3E4A /* MovieComingTableViewCell.swift */; };
 		29FEF9D41CB4FD8C00CC034A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEF9D31CB4FD8C00CC034A /* LoginViewController.swift */; };
 		29FEF9D61CB4FF9500CC034A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEF9D51CB4FF9500CC034A /* RegisterViewController.swift */; };
 		29FEF9D81CB504C900CC034A /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEF9D71CB504C900CC034A /* HomePageViewController.swift */; };
@@ -102,6 +104,8 @@
 		29DE30DB1CD21BF800CE53FC /* MovieShowingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieShowingViewController.swift; sourceTree = "<group>"; };
 		29DE30DD1CD21C0B00CE53FC /* MovieHotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieHotViewController.swift; sourceTree = "<group>"; };
 		29DE30DF1CD21C1800CE53FC /* MovieComingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieComingViewController.swift; sourceTree = "<group>"; };
+		29E275531CE1A3DD002D3E4A /* MovieHotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieHotTableViewCell.swift; sourceTree = "<group>"; };
+		29E275551CE1A96E002D3E4A /* MovieComingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieComingTableViewCell.swift; sourceTree = "<group>"; };
 		29FEF9D31CB4FD8C00CC034A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		29FEF9D51CB4FF9500CC034A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		29FEF9D71CB504C900CC034A /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				3A45C8261CDF51900006EE71 /* AccessRemoteInfo.swift */,
 				3A8D7B2A1CDFB09000F78B91 /* MovieInfo+CoreDataProperties.swift */,
 				3A8D7B2B1CDFB09000F78B91 /* MovieInfo.swift */,
+				29E275531CE1A3DD002D3E4A /* MovieHotTableViewCell.swift */,
+				29E275551CE1A96E002D3E4A /* MovieComingTableViewCell.swift */,
 			);
 			name = MovieDetailsModel;
 			sourceTree = "<group>";
@@ -498,10 +504,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29E275541CE1A3DD002D3E4A /* MovieHotTableViewCell.swift in Sources */,
 				29FEF9D41CB4FD8C00CC034A /* LoginViewController.swift in Sources */,
 				291F42C11CB562F3007C2F61 /* HistoryMovieModel.swift in Sources */,
 				29DE30DE1CD21C0B00CE53FC /* MovieHotViewController.swift in Sources */,
 				29FEF9D61CB4FF9500CC034A /* RegisterViewController.swift in Sources */,
+				29E275561CE1A96E002D3E4A /* MovieComingTableViewCell.swift in Sources */,
 				3A8D7B2C1CDFB09000F78B91 /* MovieInfo+CoreDataProperties.swift in Sources */,
 				292C19221CDD76BF00D342FA /* RegisterData.xcdatamodeld in Sources */,
 				3A8D7B2D1CDFB09000F78B91 /* MovieInfo.swift in Sources */,
