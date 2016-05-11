@@ -100,6 +100,7 @@ class MovieHotViewController: UIViewController, UITextFieldDelegate, UITableView
         cell.moviename!.text = aux.valueForKey("title") as? String
         cell.moviereleasedate!.text = aux.valueForKey("releaseDate") as? String
         cell.movierunningtime!.text = aux.valueForKey("runtime") as? String
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         return cell
     }
     
@@ -112,6 +113,36 @@ class MovieHotViewController: UIViewController, UITextFieldDelegate, UITableView
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 121;
     }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        self.performSegueWithIdentifier("showMovieDetails", sender: tableView)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
+    {
+        
+        
+        let indexPath = self.table.indexPathForSelectedRow!
+        let title = moviedb[indexPath.row].title
+        let company = moviedb[indexPath.row].companies
+        //        let country = moviedb[indexPath.row].contries
+        let genre = moviedb[indexPath.row].genres
+        let status = moviedb[indexPath.row].status
+        let releaseDate = moviedb[indexPath.row].releaseDate
+        let runningTime = moviedb[indexPath.row].runtime
+        
+        
+        let details = segue.destinationViewController as! ShowMovieDetailsViewController
+        details.movieName = title
+        details.movieCompanies = company
+        //        details.movieCountries = country
+        details.movieGenres = genre
+        details.movieStatuses = status
+        details.movieRunningTime = runningTime
+        details.movieReleaseDate = releaseDate
+        
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
