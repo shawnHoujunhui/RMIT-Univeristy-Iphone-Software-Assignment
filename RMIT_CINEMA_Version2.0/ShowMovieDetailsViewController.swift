@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ShowMovieDetailsViewController: UIViewController {
+class ShowMovieDetailsViewController: UIViewController{
     
+
     var movieName:String?
     var movieCompanies:String?
 //    var movieCountries:String?
@@ -17,6 +18,7 @@ class ShowMovieDetailsViewController: UIViewController {
     var movieStatuses:String?
     var movieReleaseDate:String?
     var movieRunningTime:String?
+    var movieoverview:String?
     
 
     @IBOutlet weak var mtitle: UILabel!
@@ -26,8 +28,9 @@ class ShowMovieDetailsViewController: UIViewController {
     @IBOutlet weak var mstatus: UILabel!
     @IBOutlet weak var mreleasedate: UILabel!
     @IBOutlet weak var mrunningtime: UILabel!
+    @IBOutlet weak var mdesc:UITextView!
     
-    
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +43,51 @@ class ShowMovieDetailsViewController: UIViewController {
         mstatus.text = movieStatuses
         mreleasedate.text = movieReleaseDate
         mrunningtime.text = movieRunningTime
-        
+        mdesc.text = movieoverview
         // Do any additional setup after loading the view.
     }
+    
+  
+  
+    
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
+    {
+        
+        if segue.identifier == "showFilmDetails" {
+            if let details = segue.destinationViewController as? TimePickerViewController {
+                let title = movieName
+                let runningTime = movieRunningTime
+                details.fname = title
+                details.ftime = runningTime
+            
+            }
+        
+        }
+        
+//        let company = moviedb[indexPath.row].companies
+//        //        let country = moviedb[indexPath.row].contries
+//        let genre = moviedb[indexPath.row].genres
+//        let status = moviedb[indexPath.row].status
+//        let releaseDate = moviedb[indexPath.row].releaseDate
+        
+//        let overview = moviedb[indexPath.row].overview
+        
+//        let details = segue.destinationViewController as! TimePickerViewController
+        
+//        details.movieCompanies = company
+//        //        details.movieCountries = country
+//        details.movieGenres = genre
+//        details.movieStatuses = status
+        
+//        details.movieReleaseDate = releaseDate
+//        details.movieoverview = overview
+        
+    }
+
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

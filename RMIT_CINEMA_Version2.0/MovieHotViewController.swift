@@ -130,6 +130,7 @@ class MovieHotViewController: UIViewController, UITextFieldDelegate, UITableView
         let status = moviedb[indexPath.row].status
         let releaseDate = moviedb[indexPath.row].releaseDate
         let runningTime = moviedb[indexPath.row].runtime
+        let overview = moviedb[indexPath.row].overview
         
         
         let details = segue.destinationViewController as! ShowMovieDetailsViewController
@@ -140,6 +141,7 @@ class MovieHotViewController: UIViewController, UITextFieldDelegate, UITableView
         details.movieStatuses = status
         details.movieRunningTime = runningTime
         details.movieReleaseDate = releaseDate
+        details.movieoverview = overview
         
     }
 
@@ -177,6 +179,22 @@ class MovieHotViewController: UIViewController, UITextFieldDelegate, UITableView
         
         let urlString = "https://api.themoviedb.org/3/movie/now_playing"
         var dataArray = [NSManagedObject]()
+//        do{
+//            let fetchRequest = NSFetchRequest(entityName:"MovieInfo")
+//            
+//            let temp =
+//                try context.executeFetchRequest(fetchRequest)
+//            let delMovieArray = temp as! [MovieInfo]
+//            
+//            if delMovieArray.count > 0{
+//                for delMovie in delMovieArray{
+//                    context.deleteObject(delMovie)
+//                }
+//            }
+//            
+//        }catch{
+//            
+//        }
         Alamofire.request(.GET, urlString,parameters: ["api_key":"f0851a221cec650a866275a96a9c8a08", "page":"1"]).responseJSON { resp in
             
             
@@ -262,7 +280,7 @@ class MovieHotViewController: UIViewController, UITextFieldDelegate, UITableView
                                 self.loadTable()
                                 self.table.reloadData()
                             }
-                            
+                         
                         }
                     }
                     

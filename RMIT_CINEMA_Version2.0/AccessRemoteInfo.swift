@@ -25,9 +25,9 @@ class AccessRemoteInfo: NSObject {
                 let value = resp.result.value;
                 // print(resp)
                 print(value)
-                let jsonArray = JSON(value!)["books"].array;
+                _ = JSON(value!)["books"].array;
                 let output = JSON(value!)
-                for dataObj in output["results"]{
+                for _ in output["results"]{
                     //var title = dataObj["title"]
                     //var
                 }
