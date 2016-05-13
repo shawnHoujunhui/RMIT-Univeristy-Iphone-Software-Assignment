@@ -15,6 +15,8 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
     
     var results: NSArray?
     var moviedb:[MovieInfo] = []
+    // poster list for detail page
+    var posters:[UIImage] = []
     
     
     var refreshControl = UIRefreshControl()
@@ -104,11 +106,46 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
 //
         let cell: MovieTableViewCell = tableView.dequeueReusableCellWithIdentifier("moviecell", forIndexPath: indexPath) as! MovieTableViewCell
         let aux = results![indexPath.row] as! NSManagedObject
+        let moviedb = results as! [MovieInfo]
         cell.moviename!.text = aux.valueForKey("title") as? String
         cell.moviereleasedate!.text = aux.valueForKey("releaseDate") as? String
         cell.movierunningtime!.text = aux.valueForKey("runtime") as? String
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        
+        // give the movie image a default value
+        cell.movieimage.image = UIImage(named: "placeholder")
+        
+        // create a indicator for each view
+        if cell.accessoryView == nil {
+            // set the animation color with white
+            let indicator = UIActivityIndicatorView(activityIndicatorStyle: .White)
+            cell.accessoryView = indicator
+        }
+        let indicator = cell.accessoryView as! UIActivityIndicatorView
+        
+         indicator.startAnimating()
+        // using asynchornized function to download image
+        dispatch_async(dispatch_get_main_queue(), {
+            let urlStr = NSURL(string: moviedb[indexPath.row].poster!)
+            print(urlStr)
+            let imageData = NSData(contentsOfURL: urlStr!)
+            dispatch_async(dispatch_get_main_queue(), {
+                indicator.stopAnimating()
+              
+                var currentImg:UIImage
+                if(imageData == nil){
+                    currentImg = UIImage(named: "failed")!
+                }else{
+                    currentImg = UIImage(data: imageData!)!
+                }
+                cell.imageView?.image = currentImg
+               // self.posters[indexPath.row] = currentImg
+            })
+        })
+        
+
         return cell
+        
     }
     
   
@@ -141,6 +178,7 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
         let runningTime = moviedb[indexPath.row].runtime
         let overview = moviedb[indexPath.row].overview
         
+        
         let details = segue.destinationViewController as! ShowMovieDetailsViewController
         details.movieName = title
         details.movieCompanies = company
@@ -150,6 +188,7 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
         details.movieRunningTime = runningTime
         details.movieReleaseDate = releaseDate
         details.movieoverview = overview
+       // details.posterImg = posters[indexPath.row]
         
     }
 
@@ -184,7 +223,11 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDel.managedObjectContext
         
+        
+       
         let urlString = "https://api.themoviedb.org/3/movie/now_playing"
+        // main url site
+        let mainUrl = "http://image.tmdb.org/t/p/w500"
         var dataArray = [NSManagedObject]()
 //        do{
 //            let fetchRequest = NSFetchRequest(entityName:"MovieInfo")
@@ -222,7 +265,8 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
                     let release_date = dataObj["release_date"].string ?? ""
                     let adult = dataObj["adult"].rawString()
                     let id = dataObj["id"].rawString()
-                    let poster_path = dataObj["poster_path"].string ?? ""
+                    var poster_path = dataObj["poster_path"].string ?? ""
+                    poster_path = mainUrl + poster_path
                     //var genre_ids = dataObj["genre_ids"]
                     data.setValue(id, forKey: "id")
                     data.setValue(adult, forKey: "adult")
@@ -230,6 +274,7 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
                     data.setValue(overview, forKey: "overview")
                     data.setValue(original_language, forKey: "language")
                     data.setValue(release_date, forKey: "releaseDate")
+         
                     data.setValue(poster_path, forKey: "poster")
                     let detailUrl = "https://api.themoviedb.org/3/movie/" + id!
                     Alamofire.request(.GET, detailUrl, parameters: ["api_key":"f0851a221cec650a866275a96a9c8a08"]).responseJSON{

@@ -14,9 +14,11 @@ class TimePickerViewController: UIViewController,UITableViewDataSource, UITableV
     
     var fname:String?
     var ftime:String?
+    var freleaseDate:String?
     
     @IBOutlet weak var filmname: UILabel!
     @IBOutlet weak var filmtime: UILabel!
+    @IBOutlet weak var filmreleasedate: UILabel!
     
     
     
@@ -31,13 +33,14 @@ class TimePickerViewController: UIViewController,UITableViewDataSource, UITableV
         
         filmname.text = fname
         filmtime.text = ftime
+        filmreleasedate.text = freleaseDate
         
         self.pickersController = PickerCellsController()
         self.pickersController.attachToTableView(self.pickTableView, tableViewsPriorDelegate: self, withDelegate: self)
         
         let pickerView : CityPickerView = CityPickerView()
         //date and time
-        pickerView.initData(pickTableView,pickerC: pickersController,defaultValue: ["Date","Time","AM|PM"])
+        pickerView.initData(pickTableView,pickerC: pickersController,defaultValue: ["Select","Movie","Session"])
         
         
         let pickerIP = NSIndexPath(forRow: 0, inSection: 0)

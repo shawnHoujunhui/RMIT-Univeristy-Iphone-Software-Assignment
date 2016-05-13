@@ -417,7 +417,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="smz-Sc-fE1">
                                                     <rect key="frame" x="8" y="5" width="90" height="70"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Settings1" translatesAutoresizingMaskIntoConstraints="NO" id="Fnx-Zc-MbQ">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fnx-Zc-MbQ">
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="70"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="90" id="g4B-Te-A5W"/>
@@ -496,6 +496,22 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KjK-Gb-meG">
+                                                    <rect key="frame" x="562" y="6" width="30" height="64"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81S-Dw-n4C">
+                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="64"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="63.5" id="0Qq-j7-OJA"/>
+                                                                <constraint firstAttribute="width" constant="30" id="CHv-ge-l6l"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <color key="highlightedColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -507,10 +523,13 @@
                                         <color key="tintColor" red="1" green="0.69023865299999998" blue="0.13522280959999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="smz-Sc-fE1" firstAttribute="top" secondItem="K1C-NO-Qdc" secondAttribute="top" constant="5" id="1Yz-eh-XXr"/>
+                                            <constraint firstItem="KjK-Gb-meG" firstAttribute="top" secondItem="K1C-NO-Qdc" secondAttribute="top" constant="6" id="2vX-cE-NB0"/>
+                                            <constraint firstAttribute="trailing" secondItem="KjK-Gb-meG" secondAttribute="trailing" constant="8" id="3HS-Au-dhU"/>
                                             <constraint firstItem="jnR-xA-j76" firstAttribute="leading" secondItem="K1C-NO-Qdc" secondAttribute="leading" constant="106" id="5yf-5N-Giu"/>
                                             <constraint firstItem="jnR-xA-j76" firstAttribute="top" secondItem="K1C-NO-Qdc" secondAttribute="top" constant="5" id="9hf-ba-o2L"/>
                                             <constraint firstAttribute="bottom" secondItem="smz-Sc-fE1" secondAttribute="bottom" constant="5" id="B5P-HA-9Ye"/>
                                             <constraint firstAttribute="bottom" secondItem="FKO-5O-FkJ" secondAttribute="bottom" constant="5" id="EIq-bc-JiR"/>
+                                            <constraint firstAttribute="bottom" secondItem="KjK-Gb-meG" secondAttribute="bottom" constant="10" id="FeY-Zt-dxN"/>
                                             <constraint firstItem="FKO-5O-FkJ" firstAttribute="top" secondItem="K1C-NO-Qdc" secondAttribute="top" constant="6" id="IIl-fA-aAK"/>
                                             <constraint firstItem="FKO-5O-FkJ" firstAttribute="leading" secondItem="K1C-NO-Qdc" secondAttribute="leading" constant="234" id="SCH-VM-OuU"/>
                                             <constraint firstAttribute="bottom" secondItem="jnR-xA-j76" secondAttribute="bottom" constant="6" id="V3E-Xl-C70"/>
@@ -801,7 +820,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MSY-bc-VlI">
                                 <rect key="frame" x="31" y="72" width="155" height="173"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Settings1" translatesAutoresizingMaskIntoConstraints="NO" id="9Om-Vs-F07">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Om-Vs-F07">
                                         <rect key="frame" x="0.0" y="0.0" width="155" height="173"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="173" id="N8S-lo-cDg"/>
@@ -822,7 +841,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Lj-b5-WPg">
                                         <rect key="frame" x="0.0" y="0.0" width="539" height="226"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -863,6 +882,7 @@
                         <outlet property="mcompany" destination="lyq-xX-qC6" id="zWL-f8-mQJ"/>
                         <outlet property="mdesc" destination="4Lj-b5-WPg" id="xUr-Fh-vHk"/>
                         <outlet property="mgenre" destination="m7Q-b2-jMJ" id="Xh4-KI-PtQ"/>
+                        <outlet property="mimage" destination="9Om-Vs-F07" id="kLs-Jd-0Df"/>
                         <outlet property="mreleasedate" destination="wmY-a9-ekB" id="cMi-3c-9hT"/>
                         <outlet property="mrunningtime" destination="rIo-cF-zY2" id="Be9-Gm-XU7"/>
                         <outlet property="mstatus" destination="vZi-3Q-tlH" id="iO8-Uu-UQW"/>
@@ -1118,13 +1138,14 @@
                     </view>
                     <connections>
                         <outlet property="filmname" destination="5am-7E-00A" id="jv0-oJ-RlO"/>
+                        <outlet property="filmreleasedate" destination="Pvp-7N-1ai" id="qD5-15-9o3"/>
                         <outlet property="filmtime" destination="W7X-Hr-9gV" id="4Xb-IS-98C"/>
                         <outlet property="pickTableView" destination="Bsa-Q2-F9z" id="IpA-oy-4S0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqb-qZ-1Z1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4347" y="2977"/>
+            <point key="canvasLocation" x="4353" y="2929"/>
         </scene>
         <!--HelpPageTabBarViewController-->
         <scene sceneID="Soq-Qu-djp">

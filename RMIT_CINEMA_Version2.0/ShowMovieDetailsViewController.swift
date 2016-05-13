@@ -19,8 +19,10 @@ class ShowMovieDetailsViewController: UIViewController{
     var movieReleaseDate:String?
     var movieRunningTime:String?
     var movieoverview:String?
+    var posterImg:UIImage?
     
 
+    @IBOutlet weak var mimage: UIImageView!
     @IBOutlet weak var mtitle: UILabel!
     @IBOutlet weak var mcompany: UILabel!
 //    @IBOutlet weak var mcountry: UILabel!
@@ -44,7 +46,8 @@ class ShowMovieDetailsViewController: UIViewController{
         mreleasedate.text = movieReleaseDate
         mrunningtime.text = movieRunningTime
         mdesc.text = movieoverview
-        // Do any additional setup after loading the view.
+        mimage.image = posterImg
+         // Do any additional setup after loading the view.
     }
     
   
@@ -58,8 +61,11 @@ class ShowMovieDetailsViewController: UIViewController{
             if let details = segue.destinationViewController as? TimePickerViewController {
                 let title = movieName
                 let runningTime = movieRunningTime
+                let releaseDate = movieReleaseDate
                 details.fname = title
                 details.ftime = runningTime
+                details.freleaseDate = releaseDate
+                
             
             }
         
