@@ -38,13 +38,19 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVz-RN-Fey">
-                        <rect key="frame" x="320" y="15" width="30" height="21"/>
-                        <state key="normal" title="+"/>
-                    </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRv-qT-EUo">
                         <rect key="frame" x="245" y="15" width="30" height="21"/>
                         <state key="normal" title="-"/>
+                        <connections>
+                            <action selector="minsAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lLH-ph-3xS"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVz-RN-Fey">
+                        <rect key="frame" x="320" y="15" width="30" height="21"/>
+                        <state key="normal" title="+"/>
+                        <connections>
+                            <action selector="plusAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pxT-p6-w2t"/>
+                        </connections>
                     </button>
                 </subviews>
             </tableViewCellContentView>

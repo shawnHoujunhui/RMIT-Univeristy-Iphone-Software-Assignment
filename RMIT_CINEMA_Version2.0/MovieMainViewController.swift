@@ -32,6 +32,9 @@ let CFSLogoColorBlue = 0x00AAEE
 
 class MovieMainViewController: UIViewController {
     
+    
+    
+    
     // Button Selected Color
     let selectedColor = UIColor.redColor()
     
@@ -55,6 +58,7 @@ class MovieMainViewController: UIViewController {
         
         setupNavTitleView()
         setupChildViewControllers()
+        
     }
     
     func setupNavTitleView(){
@@ -178,18 +182,21 @@ class MovieMainViewController: UIViewController {
                 underLineView.frame.origin.x = underLineViewX0
             })
             replaceController(currentVC, newVC: firstVC)
+            firstVC.saveMovieData()
             break
         case 1:
             UIView.animateWithDuration(0.2, animations: { () -> Void in
                 underLineView.frame.origin.x = underLineViewX1
             })
             replaceController(currentVC, newVC: secondVC)
+            secondVC.saveMovieData()
             break
         case 2:
             UIView.animateWithDuration(0.2, animations: { () -> Void in
                 underLineView.frame.origin.x = underLineViewX2
             })
             replaceController(currentVC, newVC: threeVC)
+            threeVC.saveMovieData()
             break
         default:break
         }

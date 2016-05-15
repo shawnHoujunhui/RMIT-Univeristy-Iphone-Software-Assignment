@@ -19,10 +19,9 @@ class ShowMovieDetailsViewController: UIViewController{
     var movieReleaseDate:String?
     var movieRunningTime:String?
     var movieoverview:String?
-    var posterImg:UIImage?
+    var movieimage:UIImage?
     
 
-    @IBOutlet weak var mimage: UIImageView!
     @IBOutlet weak var mtitle: UILabel!
     @IBOutlet weak var mcompany: UILabel!
 //    @IBOutlet weak var mcountry: UILabel!
@@ -31,8 +30,7 @@ class ShowMovieDetailsViewController: UIViewController{
     @IBOutlet weak var mreleasedate: UILabel!
     @IBOutlet weak var mrunningtime: UILabel!
     @IBOutlet weak var mdesc:UITextView!
-    
-  
+    @IBOutlet weak var mimage:UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +44,8 @@ class ShowMovieDetailsViewController: UIViewController{
         mreleasedate.text = movieReleaseDate
         mrunningtime.text = movieRunningTime
         mdesc.text = movieoverview
-        mimage.image = posterImg
-         // Do any additional setup after loading the view.
+        mimage.image = movieimage
+        // Do any additional setup after loading the view.
     }
     
   
@@ -62,10 +60,11 @@ class ShowMovieDetailsViewController: UIViewController{
                 let title = movieName
                 let runningTime = movieRunningTime
                 let releaseDate = movieReleaseDate
+                let image = movieimage
                 details.fname = title
                 details.ftime = runningTime
-                details.freleaseDate = releaseDate
-                
+                details.fimage = image
+                details.freleasedate = releaseDate
             
             }
         

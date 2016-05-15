@@ -15,9 +15,9 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
     
     var results: NSArray?
     var moviedb:[MovieInfo] = []
-    // poster list for detail page
-    var posters:[UIImage] = []
     
+    // set up image dic
+    var posterdic:[Int:UIImage] = [:]
     
     var refreshControl = UIRefreshControl()
     //create a mutable array
@@ -106,46 +106,42 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
 //
         let cell: MovieTableViewCell = tableView.dequeueReusableCellWithIdentifier("moviecell", forIndexPath: indexPath) as! MovieTableViewCell
         let aux = results![indexPath.row] as! NSManagedObject
-        let moviedb = results as! [MovieInfo]
         cell.moviename!.text = aux.valueForKey("title") as? String
         cell.moviereleasedate!.text = aux.valueForKey("releaseDate") as? String
         cell.movierunningtime!.text = aux.valueForKey("runtime") as? String
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        
-        // give the movie image a default value
-        cell.movieimage.image = UIImage(named: "placeholder")
-        
-        // create a indicator for each view
+//        let moviedb = results as! [MovieInfo]
+//        let movie = moviedb[indexPath.row]
+//        cell.moviename!.text = moviedb[indexPath.row].title
+//        cell.moviereleasedate!.text = movie.releaseDate
+//        cell.movierunningtime!.text = movie.runtime
+        cell.imageView?.image = UIImage(named: "placeholder")
         if cell.accessoryView == nil {
-            // set the animation color with white
             let indicator = UIActivityIndicatorView(activityIndicatorStyle: .White)
             cell.accessoryView = indicator
         }
+        // download poster and show poster
         let indicator = cell.accessoryView as! UIActivityIndicatorView
-        
-         indicator.startAnimating()
-        // using asynchornized function to download image
+        indicator.startAnimating()
         dispatch_async(dispatch_get_main_queue(), {
-            let urlStr = NSURL(string: moviedb[indexPath.row].poster!)
-            print(urlStr)
+            let urlStr = NSURL(string: (aux.valueForKey("poster") as? String)!)
             let imageData = NSData(contentsOfURL: urlStr!)
             dispatch_async(dispatch_get_main_queue(), {
                 indicator.stopAnimating()
-              
-                var currentImg:UIImage
+                let currentImg:UIImage
                 if(imageData == nil){
                     currentImg = UIImage(named: "failed")!
+                    cell.imageView?.image = currentImg
+                    self.posterdic[indexPath.row] = currentImg
                 }else{
                     currentImg = UIImage(data: imageData!)!
+                    cell.imageView?.image = currentImg
+                    self.posterdic[indexPath.row] = currentImg
                 }
-                cell.imageView?.image = currentImg
-               // self.posters[indexPath.row] = currentImg
-            })
+            });
+            
         })
-        
-
         return cell
-        
     }
     
   
@@ -169,6 +165,7 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
         
         
         let indexPath = self.table.indexPathForSelectedRow!
+        let moviedb = results as! [MovieInfo]
         let title = moviedb[indexPath.row].title
         let company = moviedb[indexPath.row].companies
 //        let country = moviedb[indexPath.row].contries
@@ -177,7 +174,6 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
         let releaseDate = moviedb[indexPath.row].releaseDate
         let runningTime = moviedb[indexPath.row].runtime
         let overview = moviedb[indexPath.row].overview
-        
         
         let details = segue.destinationViewController as! ShowMovieDetailsViewController
         details.movieName = title
@@ -188,7 +184,8 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
         details.movieRunningTime = runningTime
         details.movieReleaseDate = releaseDate
         details.movieoverview = overview
-       // details.posterImg = posters[indexPath.row]
+        // pick up date from temporay data store
+        details.movieimage = posterdic[indexPath.row]
         
     }
 
@@ -222,29 +219,10 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
     func saveMovieData(){
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDel.managedObjectContext
-        
-        
-       
-        let urlString = "https://api.themoviedb.org/3/movie/now_playing"
-        // main url site
         let mainUrl = "http://image.tmdb.org/t/p/w500"
+        
+        let urlString = "https://api.themoviedb.org/3/movie/now_playing"
         var dataArray = [NSManagedObject]()
-//        do{
-//            let fetchRequest = NSFetchRequest(entityName:"MovieInfo")
-//            
-//            let temp =
-//                try context.executeFetchRequest(fetchRequest)
-//            let delMovieArray = temp as! [MovieInfo]
-//            
-//            if delMovieArray.count > 0{
-//                for delMovie in delMovieArray{
-//                    context.deleteObject(delMovie)
-//                }
-//            }
-//            
-//        }catch{
-//            
-//        }
         Alamofire.request(.GET, urlString,parameters: ["api_key":"f0851a221cec650a866275a96a9c8a08", "page":"1"]).responseJSON { resp in
             
             
@@ -255,7 +233,25 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
                 // print(resp)
                 print(value)
                 
+                
                 let output = JSON(value!)
+                if(output["results"].count > 0){
+                    do{
+                        let fetchRequest = NSFetchRequest(entityName:"MovieInfo")
+                        
+                        let temp =
+                            try context.executeFetchRequest(fetchRequest)
+                        let delMovieArray = temp as! [MovieInfo]
+                        
+                        if delMovieArray.count > 0{
+                            for delMovie in delMovieArray{
+                                context.deleteObject(delMovie)
+                            }
+                        }
+                        
+                    }catch{
+                        
+                    }
                 for i in 0...output["results"].count - 1 {
                     let data = NSEntityDescription.insertNewObjectForEntityForName("MovieInfo", inManagedObjectContext:  context)
                     var dataObj = output["results"][i]
@@ -274,7 +270,6 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
                     data.setValue(overview, forKey: "overview")
                     data.setValue(original_language, forKey: "language")
                     data.setValue(release_date, forKey: "releaseDate")
-         
                     data.setValue(poster_path, forKey: "poster")
                     let detailUrl = "https://api.themoviedb.org/3/movie/" + id!
                     Alamofire.request(.GET, detailUrl, parameters: ["api_key":"f0851a221cec650a866275a96a9c8a08"]).responseJSON{
@@ -334,7 +329,7 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
                                 self.table.reloadData()
                             }
                             
-                    
+                        }
                         }
                     }
                     

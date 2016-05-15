@@ -14,11 +14,13 @@ class TimePickerViewController: UIViewController,UITableViewDataSource, UITableV
     
     var fname:String?
     var ftime:String?
-    var freleaseDate:String?
+    var freleasedate:String?
+    var fimage:UIImage?
     
     @IBOutlet weak var filmname: UILabel!
     @IBOutlet weak var filmtime: UILabel!
     @IBOutlet weak var filmreleasedate: UILabel!
+    @IBOutlet weak var filmimage:UIImageView!
     
     
     
@@ -33,14 +35,15 @@ class TimePickerViewController: UIViewController,UITableViewDataSource, UITableV
         
         filmname.text = fname
         filmtime.text = ftime
-        filmreleasedate.text = freleaseDate
+        filmreleasedate.text = freleasedate
+        filmimage.image = fimage 
         
         self.pickersController = PickerCellsController()
         self.pickersController.attachToTableView(self.pickTableView, tableViewsPriorDelegate: self, withDelegate: self)
         
         let pickerView : CityPickerView = CityPickerView()
         //date and time
-        pickerView.initData(pickTableView,pickerC: pickersController,defaultValue: ["Select","Movie","Session"])
+        pickerView.initData(pickTableView,pickerC: pickersController,defaultValue: ["Date","Time","AM|PM"])
         
         
         let pickerIP = NSIndexPath(forRow: 0, inSection: 0)

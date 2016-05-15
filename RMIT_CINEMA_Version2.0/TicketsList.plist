@@ -6,31 +6,31 @@
 		<key>type</key>
 		<string>Adult</string>
 		<key>price</key>
-		<integer>21</integer>
+		<string>21</string>
 	</dict>
 	<dict>
 		<key>type</key>
 		<string>Child</string>
 		<key>price</key>
-		<integer>16</integer>
+		<string>16</string>
 	</dict>
 	<dict>
 		<key>type</key>
 		<string>Student</string>
 		<key>price</key>
-		<integer>18</integer>
+		<string>18</string>
 	</dict>
 	<dict>
 		<key>type</key>
 		<string>Concession</string>
 		<key>price</key>
-		<integer>18</integer>
+		<string>18</string>
 	</dict>
 	<dict>
 		<key>type</key>
 		<string>Senior</string>
 		<key>price</key>
-		<integer>13</integer>
+		<string>13</string>
 	</dict>
 </array>
 </plist>
