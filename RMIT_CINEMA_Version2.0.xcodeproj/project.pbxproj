@@ -41,6 +41,7 @@
 		299ABB621CB4E9EA0045BF44 /* RMIT_CINEMA_Version2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299ABB611CB4E9EA0045BF44 /* RMIT_CINEMA_Version2_0UITests.swift */; };
 		299ABB721CB4F45D0045BF44 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299ABB711CB4F45D0045BF44 /* FirstViewController.swift */; };
 		299BF3081CB7B20400C3ADA2 /* HelpPageUIFunctionCheckingUITests2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299BF3071CB7B20400C3ADA2 /* HelpPageUIFunctionCheckingUITests2.swift */; };
+		299D34121CE87ED300B780B2 /* UIphoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D34111CE87ED300B780B2 /* UIphoto.swift */; };
 		29C0F9121CB7A26700455518 /* HelpPageUIFunctionCheckingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C0F9111CB7A26700455518 /* HelpPageUIFunctionCheckingUITests.swift */; };
 		29CA46721CB51215008062E3 /* HelpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CA46711CB51215008062E3 /* HelpPageViewController.swift */; };
 		29CA46741CB51279008062E3 /* PersonalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CA46731CB51279008062E3 /* PersonalDetailsViewController.swift */; };
@@ -54,6 +55,7 @@
 		29DE30E01CD21C1800CE53FC /* MovieComingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE30DF1CD21C1800CE53FC /* MovieComingViewController.swift */; };
 		29E275541CE1A3DD002D3E4A /* MovieHotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E275531CE1A3DD002D3E4A /* MovieHotTableViewCell.swift */; };
 		29E275561CE1A96E002D3E4A /* MovieComingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E275551CE1A96E002D3E4A /* MovieComingTableViewCell.swift */; };
+		29F4C9471CE99895004E00C5 /* TicketPrintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4C9461CE99895004E00C5 /* TicketPrintViewController.swift */; };
 		29FEF9D41CB4FD8C00CC034A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEF9D31CB4FD8C00CC034A /* LoginViewController.swift */; };
 		29FEF9D61CB4FF9500CC034A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEF9D51CB4FF9500CC034A /* RegisterViewController.swift */; };
 		29FEF9D81CB504C900CC034A /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEF9D71CB504C900CC034A /* HomePageViewController.swift */; };
@@ -126,6 +128,7 @@
 		299ABB631CB4E9EA0045BF44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		299ABB711CB4F45D0045BF44 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		299BF3071CB7B20400C3ADA2 /* HelpPageUIFunctionCheckingUITests2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPageUIFunctionCheckingUITests2.swift; sourceTree = "<group>"; };
+		299D34111CE87ED300B780B2 /* UIphoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIphoto.swift; sourceTree = "<group>"; };
 		29C0F9111CB7A26700455518 /* HelpPageUIFunctionCheckingUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPageUIFunctionCheckingUITests.swift; sourceTree = "<group>"; };
 		29CA46711CB51215008062E3 /* HelpPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPageViewController.swift; sourceTree = "<group>"; };
 		29CA46731CB51279008062E3 /* PersonalDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDetailsViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +142,7 @@
 		29DE30DF1CD21C1800CE53FC /* MovieComingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieComingViewController.swift; sourceTree = "<group>"; };
 		29E275531CE1A3DD002D3E4A /* MovieHotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieHotTableViewCell.swift; sourceTree = "<group>"; };
 		29E275551CE1A96E002D3E4A /* MovieComingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieComingTableViewCell.swift; sourceTree = "<group>"; };
+		29F4C9461CE99895004E00C5 /* TicketPrintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketPrintViewController.swift; sourceTree = "<group>"; };
 		29FEF9D31CB4FD8C00CC034A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		29FEF9D51CB4FF9500CC034A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		29FEF9D71CB504C900CC034A /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 		291F42AA1CB54CB2007C2F61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				299D34101CE87E9F00B780B2 /* UIenhance */,
 				298E2DA51CE42B4900D9DDBC /* TicketModel */,
 				2960ACDE1CE35A9D00CFEA44 /* TimePickerModel */,
 				29A275D81CB65B1100BAF745 /* PersonalDetailsModel */,
@@ -336,6 +341,7 @@
 		299ABB6F1CB4F3D30045BF44 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				29F4C9451CE99857004E00C5 /* UserServiceController */,
 				299406781CE7284800ECD722 /* Map */,
 				29966D221CB606CB00BC7734 /* MovieViewController */,
 				29CA46701CB511F8008062E3 /* HelpTabBarController */,
@@ -353,6 +359,14 @@
 				29FEF9D71CB504C900CC034A /* HomePageViewController.swift */,
 			);
 			name = "Login&RegisterController";
+			sourceTree = "<group>";
+		};
+		299D34101CE87E9F00B780B2 /* UIenhance */ = {
+			isa = PBXGroup;
+			children = (
+				299D34111CE87ED300B780B2 /* UIphoto.swift */,
+			);
+			name = UIenhance;
 			sourceTree = "<group>";
 		};
 		29A275D81CB65B1100BAF745 /* PersonalDetailsModel */ = {
@@ -393,6 +407,14 @@
 				29CA467D1CB52193008062E3 /* FeedbackViewController.swift */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		29F4C9451CE99857004E00C5 /* UserServiceController */ = {
+			isa = PBXGroup;
+			children = (
+				29F4C9461CE99895004E00C5 /* TicketPrintViewController.swift */,
+			);
+			name = UserServiceController;
 			sourceTree = "<group>";
 		};
 		6A17FEC7EF4D0C104255CF9B /* Frameworks */ = {
@@ -623,12 +645,14 @@
 				298E2DAE1CE42F1E00D9DDBC /* TicketTableViewCell.swift in Sources */,
 				29FEF9D81CB504C900CC034A /* HomePageViewController.swift in Sources */,
 				2960ACF31CE363E300CFEA44 /* AreaCitiesModel.swift in Sources */,
+				299D34121CE87ED300B780B2 /* UIphoto.swift in Sources */,
 				29CA467C1CB52189008062E3 /* TermsAndConditionsViewController.swift in Sources */,
 				297DA51C1CE0BDBE00E9AB62 /* MovieTableViewCell.swift in Sources */,
 				2960ACED1CE3636F00CFEA44 /* CityPickerView.swift in Sources */,
 				299ABB721CB4F45D0045BF44 /* FirstViewController.swift in Sources */,
 				299ABB441CB4E9E90045BF44 /* ViewController.swift in Sources */,
 				29CA46781CB52135008062E3 /* SettingViewController.swift in Sources */,
+				29F4C9471CE99895004E00C5 /* TicketPrintViewController.swift in Sources */,
 				29CA467E1CB52193008062E3 /* FeedbackViewController.swift in Sources */,
 				29CA46721CB51215008062E3 /* HelpPageViewController.swift in Sources */,
 				299ABB421CB4E9E90045BF44 /* AppDelegate.swift in Sources */,

@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<array>
+<dict>
+	<key>cell0</key>
 	<dict>
 		<key>type</key>
 		<string>Adult</string>
 		<key>price</key>
 		<string>21</string>
 	</dict>
+	<key>cell1</key>
 	<dict>
 		<key>type</key>
 		<string>Child</string>
 		<key>price</key>
 		<string>16</string>
 	</dict>
+	<key>cell2</key>
 	<dict>
 		<key>type</key>
 		<string>Student</string>
 		<key>price</key>
 		<string>18</string>
 	</dict>
+	<key>cell3</key>
 	<dict>
 		<key>type</key>
 		<string>Concession</string>
 		<key>price</key>
 		<string>18</string>
 	</dict>
+	<key>cell4</key>
 	<dict>
 		<key>type</key>
 		<string>Senior</string>
 		<key>price</key>
 		<string>13</string>
 	</dict>
-</array>
+</dict>
 </plist>

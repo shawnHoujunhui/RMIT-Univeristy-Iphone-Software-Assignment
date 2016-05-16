@@ -15,35 +15,17 @@ class TicketTableViewCell: UITableViewCell {
     @IBOutlet weak var mins: UIButton!
     @IBOutlet weak var sum: UILabel!
     @IBOutlet weak var plus: UIButton!
-    var currentNum:Int = 0
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-        
-    }
-    
-//    @IBAction func minsAction(sender: AnyObject) {
-//        if(sum.text == "0"){
-//            return
-//        }
-//        currentNum -= 1
-//        sum.text = currentNum as? String
-//        
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        // Initialization code
+//    }
+//
+//    override func setSelected(selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
 //        
 //    }
     
-//    
-//    @IBAction func plusAction(sender: AnyObject) {
-//        
-//    }
-//    
-//    func calculatePrice() -> Int {
-//        
-//    }
+
 }
