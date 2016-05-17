@@ -12,6 +12,7 @@ import CoreLocation
 
 class MapViewController: UIViewController {
 
+   
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var btnFood: UIButton!
@@ -182,4 +183,10 @@ class MapViewController: UIViewController {
     */
 
  }
+    @IBAction func homeButtonAction(sender: AnyObject) {
+        let homeButton = UIStoryboard(name: "Main", bundle: nil)
+        let home = homeButton.instantiateViewControllerWithIdentifier("HomePageViewController")
+        self.presentViewController(home,animated:true, completion:nil)
+
+    }
 }

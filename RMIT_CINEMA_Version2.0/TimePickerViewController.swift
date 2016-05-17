@@ -86,7 +86,7 @@ class TimePickerViewController: UIViewController,UITableViewDataSource, UITableV
         
         footerImage = UIButton(frame: CGRectMake(20, 2, 46, 46))
         footerImage.setImage(UIImage(named: "Home_Cart"),forState:.Normal)
-        // footerImage.addTarget(self, action: Selector("jumpTicket"), forControlEvents: UIControlEvents.TouchUpInside)
+        footerImage.addTarget(self, action: #selector(TimePickerViewController.jumpTicket(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         footerView.addSubview(footerImage)
         
         goodsSum = UILabel(frame: CGRectMake(54,2 , 15, 15))
@@ -220,12 +220,12 @@ class TimePickerViewController: UIViewController,UITableViewDataSource, UITableV
         }
         cell.sum.text = "\(Int(cell.sum.text!)! + 1)"
     }
-//    func jumpTicket(sender:AnyObject){
-//        let homeButton = UIStoryboard(name: "Main", bundle: nil)
-//        let home = homeButton.instantiateViewControllerWithIdentifier("TicketPrintViewController")
-//        self.presentViewController(home,animated:true, completion:nil)
-//        self.performSegueWithIdentifier("ticketDetails", sender: self)
-//    }
+    func jumpTicket(sender:AnyObject){
+      //  let homeButton = UIStoryboard(name: "Main", bundle: nil)
+      //  let home = homeButton.instantiateViewControllerWithIdentifier("TicketPrintViewController")
+      //  self.presentViewController(home,animated:true, completion:nil)
+        self.performSegueWithIdentifier("ticketDetails", sender: self)
+    }
 //
 //    
     // transform data to print ticket function
@@ -235,8 +235,21 @@ class TimePickerViewController: UIViewController,UITableViewDataSource, UITableV
         if segue.identifier == "ticketDetails" {
             if let details = segue.destinationViewController as? TicketPrintViewController {
                 let title = fname
+                let release = freleasedate
+                let running = ftime
+                let image = fimage
+             //   let ticketnum = goodsSum
+
+                    
+
+
                
                 details.cinemaTitle = title
+                details.cinemaRunning = running
+                details.cinemaReleaseDate = release
+                details.cinemaImage = image
+                details.cinemaTotalPrice = priceSum.text
+                
                 
             }
             
