@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		28E5C09F3186304627D5CD2A /* Pods_RMIT_CINEMA_Version2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F50454A96FA79CEF6223DFC /* Pods_RMIT_CINEMA_Version2_0.framework */; };
 		291032B41CB676B40069C8A6 /* PersonalDetailsInfoProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291032B31CB676B40069C8A6 /* PersonalDetailsInfoProcessor.swift */; };
+		291A414E1CEB175500CEDB14 /* ExtendCustomKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291A414C1CEB175500CEDB14 /* ExtendCustomKeyboard.swift */; };
+		291A414F1CEB175500CEDB14 /* ExtendCustomKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291A414D1CEB175500CEDB14 /* ExtendCustomKeyboard.xib */; };
 		291D3D1A1CB7AAEE00427326 /* LoginPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291D3D191CB7AAEE00427326 /* LoginPageUITests.swift */; };
 		291D3D1C1CB7ADBA00427326 /* RegisterPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291D3D1B1CB7ADBA00427326 /* RegisterPageUITests.swift */; };
 		291F42B91CB55ED0007C2F61 /* MovieHistoryList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 291F42B81CB55ED0007C2F61 /* MovieHistoryList.plist */; };
@@ -23,6 +25,8 @@
 		2960ACEF1CE363AC00CFEA44 /* AreaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960ACEE1CE363AC00CFEA44 /* AreaFactory.swift */; };
 		2960ACF11CE363CD00CFEA44 /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960ACF01CE363CD00CFEA44 /* AreaModel.swift */; };
 		2960ACF31CE363E300CFEA44 /* AreaCitiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960ACF21CE363E300CFEA44 /* AreaCitiesModel.swift */; };
+		29632A991CEB03BA002CEB2D /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29632A981CEB03BA002CEB2D /* KeyboardViewController.swift */; };
+		29632A9D1CEB03BA002CEB2D /* RMIT_CINEMA_Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 29632A961CEB03BA002CEB2D /* RMIT_CINEMA_Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		297C82F41CE23128009B1230 /* ShowMovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C82F31CE23128009B1230 /* ShowMovieDetailsViewController.swift */; };
 		297DA51C1CE0BDBE00E9AB62 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DA51B1CE0BDBE00E9AB62 /* MovieTableViewCell.swift */; };
 		298507801CE366A900A6BE30 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2985077F1CE366A900A6BE30 /* area.plist */; };
@@ -31,6 +35,10 @@
 		298E2DAF1CE42F1E00D9DDBC /* TicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 298E2DAD1CE42F1E00D9DDBC /* TicketTableViewCell.xib */; };
 		2994067A1CE7287400ECD722 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299406791CE7287400ECD722 /* MapViewController.swift */; };
 		2994067C1CE736A300ECD722 /* MapDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994067B1CE736A300ECD722 /* MapDetails.swift */; };
+		29965BDF1CEAEC3E003CCFE5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29965BDE1CEAEC3E003CCFE5 /* MapKit.framework */; };
+		29965BE11CEAED0E003CCFE5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29965BE01CEAED0E003CCFE5 /* CoreData.framework */; };
+		29965BE31CEAED1B003CCFE5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29965BE21CEAED1B003CCFE5 /* CoreGraphics.framework */; };
+		29965BE51CEAED23003CCFE5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29965BE41CEAED23003CCFE5 /* CoreLocation.framework */; };
 		29966D211CB5F8DD00BC7734 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29966D201CB5F8DD00BC7734 /* HistoryViewController.swift */; };
 		299ABB421CB4E9E90045BF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299ABB411CB4E9E90045BF44 /* AppDelegate.swift */; };
 		299ABB441CB4E9E90045BF44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299ABB431CB4E9E90045BF44 /* ViewController.swift */; };
@@ -67,6 +75,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		29632A9B1CEB03BA002CEB2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 299ABB361CB4E9E90045BF44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29632A951CEB03BA002CEB2D;
+			remoteInfo = RMIT_CINEMA_Keyboard;
+		};
 		299ABB531CB4E9EA0045BF44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 299ABB361CB4E9E90045BF44 /* Project object */;
@@ -83,8 +98,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		29632AA11CEB03BB002CEB2D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				29632A9D1CEB03BA002CEB2D /* RMIT_CINEMA_Keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		291032B31CB676B40069C8A6 /* PersonalDetailsInfoProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDetailsInfoProcessor.swift; sourceTree = "<group>"; };
+		291A414C1CEB175500CEDB14 /* ExtendCustomKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendCustomKeyboard.swift; sourceTree = "<group>"; };
+		291A414D1CEB175500CEDB14 /* ExtendCustomKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExtendCustomKeyboard.xib; sourceTree = "<group>"; };
 		291D3D191CB7AAEE00427326 /* LoginPageUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageUITests.swift; sourceTree = "<group>"; };
 		291D3D1B1CB7ADBA00427326 /* RegisterPageUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageUITests.swift; sourceTree = "<group>"; };
 		291F42B81CB55ED0007C2F61 /* MovieHistoryList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MovieHistoryList.plist; sourceTree = "<group>"; };
@@ -104,6 +135,9 @@
 		2960ACEE1CE363AC00CFEA44 /* AreaFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaFactory.swift; sourceTree = "<group>"; };
 		2960ACF01CE363CD00CFEA44 /* AreaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
 		2960ACF21CE363E300CFEA44 /* AreaCitiesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaCitiesModel.swift; sourceTree = "<group>"; };
+		29632A961CEB03BA002CEB2D /* RMIT_CINEMA_Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RMIT_CINEMA_Keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		29632A981CEB03BA002CEB2D /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		29632A9A1CEB03BA002CEB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		297C82F31CE23128009B1230 /* ShowMovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMovieDetailsViewController.swift; sourceTree = "<group>"; };
 		297DA51B1CE0BDBE00E9AB62 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		2985077F1CE366A900A6BE30 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
@@ -112,6 +146,10 @@
 		298E2DAD1CE42F1E00D9DDBC /* TicketTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketTableViewCell.xib; sourceTree = "<group>"; };
 		299406791CE7287400ECD722 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2994067B1CE736A300ECD722 /* MapDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetails.swift; sourceTree = "<group>"; };
+		29965BDE1CEAEC3E003CCFE5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		29965BE01CEAED0E003CCFE5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		29965BE21CEAED1B003CCFE5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29965BE41CEAED23003CCFE5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		29966D201CB5F8DD00BC7734 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		299ABB3E1CB4E9E90045BF44 /* RMIT_CINEMA_Version2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMIT_CINEMA_Version2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		299ABB411CB4E9E90045BF44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,10 +195,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		29632A931CEB03BA002CEB2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		299ABB3B1CB4E9E90045BF44 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29965BE51CEAED23003CCFE5 /* CoreLocation.framework in Frameworks */,
+				29965BE31CEAED1B003CCFE5 /* CoreGraphics.framework in Frameworks */,
+				29965BE11CEAED0E003CCFE5 /* CoreData.framework in Frameworks */,
+				29965BDF1CEAEC3E003CCFE5 /* MapKit.framework in Frameworks */,
 				28E5C09F3186304627D5CD2A /* Pods_RMIT_CINEMA_Version2_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +291,17 @@
 			name = "OC-Header";
 			sourceTree = "<group>";
 		};
+		29632A971CEB03BA002CEB2D /* RMIT_CINEMA_Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				29632A981CEB03BA002CEB2D /* KeyboardViewController.swift */,
+				29632A9A1CEB03BA002CEB2D /* Info.plist */,
+				291A414C1CEB175500CEDB14 /* ExtendCustomKeyboard.swift */,
+				291A414D1CEB175500CEDB14 /* ExtendCustomKeyboard.xib */,
+			);
+			path = RMIT_CINEMA_Keyboard;
+			sourceTree = "<group>";
+		};
 		298E2DA51CE42B4900D9DDBC /* TicketModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +340,7 @@
 				299ABB401CB4E9E90045BF44 /* RMIT_CINEMA_Version2.0 */,
 				299ABB551CB4E9EA0045BF44 /* RMIT_CINEMA_Version2.0Tests */,
 				299ABB601CB4E9EA0045BF44 /* RMIT_CINEMA_Version2.0UITests */,
+				29632A971CEB03BA002CEB2D /* RMIT_CINEMA_Keyboard */,
 				299ABB3F1CB4E9E90045BF44 /* Products */,
 				90DE89F3CAF62D96FC895B01 /* Pods */,
 				6A17FEC7EF4D0C104255CF9B /* Frameworks */,
@@ -292,6 +353,7 @@
 				299ABB3E1CB4E9E90045BF44 /* RMIT_CINEMA_Version2.0.app */,
 				299ABB521CB4E9EA0045BF44 /* RMIT_CINEMA_Version2.0Tests.xctest */,
 				299ABB5D1CB4E9EA0045BF44 /* RMIT_CINEMA_Version2.0UITests.xctest */,
+				29632A961CEB03BA002CEB2D /* RMIT_CINEMA_Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -420,6 +482,10 @@
 		6A17FEC7EF4D0C104255CF9B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				29965BE41CEAED23003CCFE5 /* CoreLocation.framework */,
+				29965BE21CEAED1B003CCFE5 /* CoreGraphics.framework */,
+				29965BE01CEAED0E003CCFE5 /* CoreData.framework */,
+				29965BDE1CEAEC3E003CCFE5 /* MapKit.framework */,
 				2F50454A96FA79CEF6223DFC /* Pods_RMIT_CINEMA_Version2_0.framework */,
 			);
 			name = Frameworks;
@@ -437,6 +503,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		29632A951CEB03BA002CEB2D /* RMIT_CINEMA_Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29632AA01CEB03BB002CEB2D /* Build configuration list for PBXNativeTarget "RMIT_CINEMA_Keyboard" */;
+			buildPhases = (
+				29632A921CEB03BA002CEB2D /* Sources */,
+				29632A931CEB03BA002CEB2D /* Frameworks */,
+				29632A941CEB03BA002CEB2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RMIT_CINEMA_Keyboard;
+			productName = RMIT_CINEMA_Keyboard;
+			productReference = 29632A961CEB03BA002CEB2D /* RMIT_CINEMA_Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		299ABB3D1CB4E9E90045BF44 /* RMIT_CINEMA_Version2.0 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 299ABB661CB4E9EA0045BF44 /* Build configuration list for PBXNativeTarget "RMIT_CINEMA_Version2.0" */;
@@ -447,10 +530,12 @@
 				299ABB3C1CB4E9E90045BF44 /* Resources */,
 				D215E9420C72EE968CE83C74 /* Embed Pods Frameworks */,
 				9DBA484BF2A36EC263BE38BC /* Copy Pods Resources */,
+				29632AA11CEB03BB002CEB2D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				29632A9C1CEB03BA002CEB2D /* PBXTargetDependency */,
 			);
 			name = RMIT_CINEMA_Version2.0;
 			productName = RMIT_CINEMA_Version2.0;
@@ -503,9 +588,18 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "RMIT-JunHui Hou";
 				TargetAttributes = {
+					29632A951CEB03BA002CEB2D = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = HBKWCX95JD;
+					};
 					299ABB3D1CB4E9E90045BF44 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = HBKWCX95JD;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					299ABB511CB4E9EA0045BF44 = {
 						CreatedOnToolsVersion = 7.3;
@@ -535,11 +629,20 @@
 				299ABB3D1CB4E9E90045BF44 /* RMIT_CINEMA_Version2.0 */,
 				299ABB511CB4E9EA0045BF44 /* RMIT_CINEMA_Version2.0Tests */,
 				299ABB5C1CB4E9EA0045BF44 /* RMIT_CINEMA_Version2.0UITests */,
+				29632A951CEB03BA002CEB2D /* RMIT_CINEMA_Keyboard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		29632A941CEB03BA002CEB2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				291A414F1CEB175500CEDB14 /* ExtendCustomKeyboard.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		299ABB3C1CB4E9E90045BF44 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -622,6 +725,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		29632A921CEB03BA002CEB2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29632A991CEB03BA002CEB2D /* KeyboardViewController.swift in Sources */,
+				291A414E1CEB175500CEDB14 /* ExtendCustomKeyboard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		299ABB3A1CB4E9E90045BF44 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -692,6 +804,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		29632A9C1CEB03BA002CEB2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29632A951CEB03BA002CEB2D /* RMIT_CINEMA_Keyboard */;
+			targetProxy = 29632A9B1CEB03BA002CEB2D /* PBXContainerItemProxy */;
+		};
 		299ABB541CB4E9EA0045BF44 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 299ABB3D1CB4E9E90045BF44 /* RMIT_CINEMA_Version2.0 */;
@@ -724,6 +841,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		29632A9E1CEB03BB002CEB2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RMIT_CINEMA_Keyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.rmit.s3462460.RMIT-CINEMA-Version2-0.RMIT-CINEMA-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		29632A9F1CEB03BB002CEB2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RMIT_CINEMA_Keyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.rmit.s3462460.RMIT-CINEMA-Version2-0.RMIT-CINEMA-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		299ABB641CB4E9EA0045BF44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -815,6 +954,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = RMIT_CINEMA_Version2.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.rmit.s3462460.RMIT-CINEMA-Version2-0";
@@ -830,6 +970,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = RMIT_CINEMA_Version2.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.rmit.s3462460.RMIT-CINEMA-Version2-0";
@@ -887,6 +1028,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		29632AA01CEB03BB002CEB2D /* Build configuration list for PBXNativeTarget "RMIT_CINEMA_Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29632A9E1CEB03BB002CEB2D /* Debug */,
+				29632A9F1CEB03BB002CEB2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		299ABB391CB4E9E90045BF44 /* Build configuration list for PBXProject "RMIT_CINEMA_Version2.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

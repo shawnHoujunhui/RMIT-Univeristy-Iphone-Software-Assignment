@@ -55,8 +55,9 @@ class MapViewController: UIViewController {
         reset()
     }
     @IBAction func btnLocationAction(sender: AnyObject) {
-         mapView.removeAnnotations(mapView.annotations)
+        mapView.removeAnnotations(mapView.annotations)
         searchMap("RMIT University")
+        
         reset()
     }
     @IBAction func btnDrinkAction(sender: AnyObject) {

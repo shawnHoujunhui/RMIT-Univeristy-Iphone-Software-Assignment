@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>RMIT_CINEMA_Keyboard.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>RMIT_CINEMA_Version2.0.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>29632A951CEB03BA002CEB2D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>299ABB3D1CB4E9E90045BF44</key>
 		<dict>
 			<key>primary</key>
