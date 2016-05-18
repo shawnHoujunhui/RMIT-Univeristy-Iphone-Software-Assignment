@@ -615,6 +615,9 @@
                         <barButtonItem key="leftBarButtonItem" image="homebuttonsmall" style="plain" id="3Fz-uy-qsk">
                             <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
                             <color key="tintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="homeAction:" destination="0eL-2P-jU9" id="ma3-vW-KEe"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="dPy-BW-5MG">
                             <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-10" maxY="5"/>

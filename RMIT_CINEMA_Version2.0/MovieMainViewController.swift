@@ -218,5 +218,11 @@ class MovieMainViewController: UIViewController {
             }
         }
     }
+    @IBAction func homeAction(sender: AnyObject) {
+        let homeButton = UIStoryboard(name: "Main", bundle: nil)
+        let home = homeButton.instantiateViewControllerWithIdentifier("HomePageViewController")
+        self.presentViewController(home,animated:true, completion:nil)
+        
+    }
     
 }

@@ -206,6 +206,7 @@ class KeyboardViewController: UIInputViewController {
         let number = "t"
         let proxy = self.textDocumentProxy as UIKeyInput
         proxy.insertText(number)
+        proxy.deleteBackward()
     }
     func worduButton(_: AnyObject){
         let number = "u"
@@ -232,7 +233,10 @@ class KeyboardViewController: UIInputViewController {
         let proxy = self.textDocumentProxy as UIKeyInput
         proxy.insertText(number)
     }
-    
+    func cancelButton(_: AnyObject){
+        let proxy = self.textDocumentProxy as UIKeyInput
+        proxy.deleteBackward()
+    }
     
     
     
@@ -399,6 +403,10 @@ class KeyboardViewController: UIInputViewController {
                     w.addTarget(self, action: #selector(wordwButton), forControlEvents: .TouchDown)
                     w.backgroundColor = UIColor.blackColor()
                     w.layer.cornerRadius = 10
+                }else if w.currentTitle == "Cancel"{
+                    w.addTarget(self, action: #selector(cancelButton), forControlEvents: .TouchDown)
+                    w.backgroundColor = UIColor.blackColor()
+                    w.layer.cornerRadius = 10
                 }
             }
         }
@@ -414,7 +422,7 @@ class KeyboardViewController: UIInputViewController {
         // Perform custom UI setup here
         self.nextKeyboardButton = UIButton(type: .System)
     
-        self.nextKeyboardButton.setTitle(NSLocalizedString("Change Keyboard", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
+        self.nextKeyboardButton.setTitle(NSLocalizedString("Change", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
         self.nextKeyboardButton.sizeToFit()
         self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
         self.nextKeyboardButton.layer.cornerRadius = 10
