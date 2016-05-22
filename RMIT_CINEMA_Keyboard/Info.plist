@@ -6,6 +6,8 @@
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
 	<string>RMIT_CINEMA_Keyboard</string>
+	<key>CFBundleDocumentTypes</key>
+	<array/>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

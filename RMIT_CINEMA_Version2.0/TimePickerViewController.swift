@@ -20,18 +20,14 @@ class TimePickerViewController: UIViewController,UITableViewDataSource, UITableV
     var priceOp:UILabel!
     var priceSum:UILabel!
     var cells : NSDictionary? // Global Variable
-    
-    
+ 
     var isStatus:Bool = false
-
-    
+ 
     var fname:String?
     var ftime:String?
     var freleasedate:String?
     var fimage:UIImage?
-    
-    
-    
+
     @IBOutlet weak var filmname: UILabel!
     @IBOutlet weak var filmtime: UILabel!
     @IBOutlet weak var filmreleasedate: UILabel!
@@ -46,16 +42,11 @@ class TimePickerViewController: UIViewController,UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-       
 
-        
         filmname.text = fname
         filmtime.text = ftime
         filmreleasedate.text = freleasedate
         filmimage.image = fimage
-        
-     
         self.filmimage.layer.cornerRadius = 70
         
         self.pickersController = PickerCellsController()
@@ -109,7 +100,6 @@ class TimePickerViewController: UIViewController,UITableViewDataSource, UITableV
         priceSum.text = "0"
         priceSum.textColor = UIColor.whiteColor()
         footerView.addSubview(priceSum)
-        
         
         let path = NSBundle.mainBundle().bundlePath
         let plistName:NSString = "TicketsList.plist"
@@ -231,7 +221,8 @@ class TimePickerViewController: UIViewController,UITableViewDataSource, UITableV
     // transform data to print ticket function
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
     {
-        
+      
+            
         if segue.identifier == "ticketDetails" {
             if let details = segue.destinationViewController as? TicketPrintViewController {
                 let title = fname

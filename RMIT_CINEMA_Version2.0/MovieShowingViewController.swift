@@ -24,12 +24,6 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
     //var modelArray:NSMutableArray = []
     
     @IBOutlet weak var table: UITableView!
-    
-    
-    
-    
-  
-    
     override func viewDidLoad() {
        //layoutViewControl()
        super.viewDidLoad()
@@ -43,10 +37,6 @@ class MovieShowingViewController: UIViewController, UITextFieldDelegate, UITable
         refreshControl.attributedTitle = NSAttributedString(string: "refresh")
         table.addSubview(refreshControl)
         refreshData()
-        
-        
-        
-       
         // Do any additional setup after loading the view.
         
     }

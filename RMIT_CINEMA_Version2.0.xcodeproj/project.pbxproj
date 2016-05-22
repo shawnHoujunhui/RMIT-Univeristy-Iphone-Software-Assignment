@@ -19,6 +19,7 @@
 		291F42C91CB56418007C2F61 /* HistoryMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291F42C71CB56418007C2F61 /* HistoryMovieTableViewCell.xib */; };
 		292C191F1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 292C191D1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodeld */; };
 		292C19221CDD76BF00D342FA /* RegisterData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 292C19201CDD76BF00D342FA /* RegisterData.xcdatamodeld */; };
+		295377E81CED946F007C5BE5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295377E71CED946F007C5BE5 /* MapKit.framework */; };
 		2960ACDC1CE359C300CFEA44 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960ACDB1CE359C300CFEA44 /* TimePickerViewController.swift */; };
 		2960ACE51CE361D400CFEA44 /* PickerCellsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2960ACE41CE361D400CFEA44 /* PickerCellsController.m */; };
 		2960ACED1CE3636F00CFEA44 /* CityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960ACEC1CE3636F00CFEA44 /* CityPickerView.swift */; };
@@ -35,7 +36,6 @@
 		298E2DAF1CE42F1E00D9DDBC /* TicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 298E2DAD1CE42F1E00D9DDBC /* TicketTableViewCell.xib */; };
 		2994067A1CE7287400ECD722 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299406791CE7287400ECD722 /* MapViewController.swift */; };
 		2994067C1CE736A300ECD722 /* MapDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994067B1CE736A300ECD722 /* MapDetails.swift */; };
-		29965BDF1CEAEC3E003CCFE5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29965BDE1CEAEC3E003CCFE5 /* MapKit.framework */; };
 		29965BE11CEAED0E003CCFE5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29965BE01CEAED0E003CCFE5 /* CoreData.framework */; };
 		29965BE31CEAED1B003CCFE5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29965BE21CEAED1B003CCFE5 /* CoreGraphics.framework */; };
 		29965BE51CEAED23003CCFE5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29965BE41CEAED23003CCFE5 /* CoreLocation.framework */; };
@@ -124,6 +124,7 @@
 		291F42C71CB56418007C2F61 /* HistoryMovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryMovieTableViewCell.xib; sourceTree = "<group>"; };
 		292C191E1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RMIT_CINEMA_Version2.xcdatamodel; sourceTree = "<group>"; };
 		292C19211CDD76BF00D342FA /* RegisterData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RegisterData.xcdatamodel; sourceTree = "<group>"; };
+		295377E71CED946F007C5BE5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2960ACCD1CE3595800CFEA44 /* RMIT_CINEMA_Version2.0-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RMIT_CINEMA_Version2.0-Bridging-Header.h"; sourceTree = "<group>"; };
 		2960ACDB1CE359C300CFEA44 /* TimePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
 		2960ACE01CE3618200CFEA44 /* PickerCellsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerCellsController.h; sourceTree = "<group>"; };
@@ -146,7 +147,6 @@
 		298E2DAD1CE42F1E00D9DDBC /* TicketTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketTableViewCell.xib; sourceTree = "<group>"; };
 		299406791CE7287400ECD722 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2994067B1CE736A300ECD722 /* MapDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetails.swift; sourceTree = "<group>"; };
-		29965BDE1CEAEC3E003CCFE5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		29965BE01CEAED0E003CCFE5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29965BE21CEAED1B003CCFE5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29965BE41CEAED23003CCFE5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -208,8 +208,8 @@
 			files = (
 				29965BE51CEAED23003CCFE5 /* CoreLocation.framework in Frameworks */,
 				29965BE31CEAED1B003CCFE5 /* CoreGraphics.framework in Frameworks */,
+				295377E81CED946F007C5BE5 /* MapKit.framework in Frameworks */,
 				29965BE11CEAED0E003CCFE5 /* CoreData.framework in Frameworks */,
-				29965BDF1CEAEC3E003CCFE5 /* MapKit.framework in Frameworks */,
 				28E5C09F3186304627D5CD2A /* Pods_RMIT_CINEMA_Version2_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,10 +482,10 @@
 		6A17FEC7EF4D0C104255CF9B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				295377E71CED946F007C5BE5 /* MapKit.framework */,
 				29965BE41CEAED23003CCFE5 /* CoreLocation.framework */,
 				29965BE21CEAED1B003CCFE5 /* CoreGraphics.framework */,
 				29965BE01CEAED0E003CCFE5 /* CoreData.framework */,
-				29965BDE1CEAEC3E003CCFE5 /* MapKit.framework */,
 				2F50454A96FA79CEF6223DFC /* Pods_RMIT_CINEMA_Version2_0.framework */,
 			);
 			name = Frameworks;
@@ -591,6 +591,11 @@
 					29632A951CEB03BA002CEB2D = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = HBKWCX95JD;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					299ABB3D1CB4E9E90045BF44 = {
 						CreatedOnToolsVersion = 7.3;

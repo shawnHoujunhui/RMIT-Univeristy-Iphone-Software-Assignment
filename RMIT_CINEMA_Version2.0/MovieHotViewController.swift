@@ -134,13 +134,9 @@ class MovieHotViewController: UIViewController, UITextFieldDelegate, UITableView
                     self.posterdic[indexPath.row] = currentImg
                 }
             });
-            
         })
         return cell
     }
-    
-    
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;
     }
@@ -157,8 +153,6 @@ class MovieHotViewController: UIViewController, UITextFieldDelegate, UITableView
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
     {
-        
-        
         let indexPath = self.table.indexPathForSelectedRow!
         let moviedb = results as! [MovieInfo]
         let title = moviedb[indexPath.row].title

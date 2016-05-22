@@ -24,12 +24,6 @@ class MovieComingViewController: UIViewController, UITextFieldDelegate, UITableV
     //var modelArray:NSMutableArray = []
     
     @IBOutlet weak var table: UITableView!
-    
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         //layoutViewControl()
         super.viewDidLoad()
@@ -43,15 +37,8 @@ class MovieComingViewController: UIViewController, UITextFieldDelegate, UITableV
         refreshControl.attributedTitle = NSAttributedString(string: "refresh")
         table.addSubview(refreshControl)
         refreshData()
-        
-        
-        
-        
         // Do any additional setup after loading the view.
-        
     }
-    
-    
     // Warning Issues
     // refresh data
     func refreshData() {
@@ -85,9 +72,6 @@ class MovieComingViewController: UIViewController, UITextFieldDelegate, UITableV
     //        }
     //
     //    }
-    
-    
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return results!.count
     }
