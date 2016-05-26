@@ -15,6 +15,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var login: UIButton!
     
+    let model = FormModel.sharedInstance
+    
     // This is called when the user tap the return button on the keyborad
     // Once we tap the return of keyborad, the keyboard will be dismissed
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -42,9 +44,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         username.delegate = self
         password.delegate = self
         // disable the login button
+        model.getForms()
         self.login.disable()
-        
-        
         // Do any additional setup after loading the view.
     }
     
@@ -67,7 +68,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     // Validation for checking all the textfield
     @IBAction func loginButtonChecking(sender: AnyObject) {
-        if self.username.validateEmail() && self.password.validatePassword(){
+        if self.username.validateEmail() && self.password.validatePassword() && self.username.validateEmailVal() && self.password.validatePasswordVal(self.username.text!){
             // Login to home page
             let homeButton = UIStoryboard(name: "Main", bundle: nil)
             let home1 = homeButton.instantiateViewControllerWithIdentifier("HomePageViewController")

@@ -53,10 +53,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             
             self.btnStore.alpha = 0.8
             self.btnStore.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1,1), CGAffineTransformMakeTranslation(-80, -85))
-            
             }, completion:nil)
-        
     }
+    
     @IBAction func btnFoodAction(sender: AnyObject) {
         mapView.removeAnnotations(mapView.annotations)
         searchMap("coffee bar")
@@ -89,6 +88,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         searchMap("Store")
         reset()
     }
+    
     //initial location
     let initialLocation = CLLocation(latitude:-37.7796630000,longitude:144.9976860000)
     // set search range
@@ -166,12 +166,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
-            
             if (error != nil) {
                 print("Reverse geocoder failed with error" + error!.localizedDescription)
                 return
             }
-            
             if placemarks!.count > 0 {
                 let pm = placemarks![0] as CLPlacemark
                 self.displayLocationInfo(pm)
@@ -206,8 +204,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             let theSpan:MKCoordinateSpan = MKCoordinateSpanMake(0.1 , 0.1)
             let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLatitude, longitude: myLongitude)
             let theRegion:MKCoordinateRegion = MKCoordinateRegionMake(location, theSpan)
-            
             mapView.setRegion(theRegion, animated: true)
+            
         }
     }
     
@@ -234,8 +232,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let y = sin(dLon) * cos(lat2);
         let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(dLon);
         let radiansBearing = atan2(y, x);
-        
         return radiansToDegrees(radiansBearing)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -266,10 +264,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             self.btnStore.alpha = 0
             self.btnStore.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(0,0), CGAffineTransformMakeTranslation(0, 0))
             }, completion:nil)
-        
-    
-    
     }
+    
     // add place details
     func addLocation(title:String, latitude:CLLocationDegrees,longtitude:CLLocationDegrees){
         let location = CLLocationCoordinate2D(latitude:latitude , longitude: longtitude)
@@ -291,7 +287,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 self.addLocation(item.name!, latitude:item.placemark.location!.coordinate.latitude, longtitude: item.placemark.location!.coordinate.longitude)
             }
         })
-
     /*
     // MARK: - Navigation
 
@@ -301,8 +296,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         // Pass the selected object to the new view controller.
     }
     */
-
- }
+    }
+    
     @IBAction func homeButtonAction(sender: AnyObject) {
         let homeButton = UIStoryboard(name: "Main", bundle: nil)
         let home = homeButton.instantiateViewControllerWithIdentifier("HomePageViewController")

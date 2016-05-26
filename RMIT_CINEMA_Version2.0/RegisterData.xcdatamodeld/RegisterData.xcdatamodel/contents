@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
-    <entity name="Form" syncable="YES">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
+    <entity name="Form" representedClassName=".Form" syncable="YES">
         <attribute name="emailaddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="History" representedClassName=".History" syncable="YES">
+        <attribute name="movieName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="MovieInfo" representedClassName=".MovieInfo" syncable="YES">
         <attribute name="adult" optional="YES" attributeType="String" syncable="YES"/>
@@ -23,5 +29,6 @@
     <elements>
         <element name="Form" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="MovieInfo" positionX="-63" positionY="9" width="128" height="225"/>
+        <element name="History" positionX="-54" positionY="99" width="128" height="105"/>
     </elements>
 </model>

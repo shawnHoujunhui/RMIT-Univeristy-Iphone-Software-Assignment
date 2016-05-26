@@ -21,7 +21,7 @@ class AccessRemoteInfo: NSObject {
             
             if let error = resp.result.error{
                 print(error)
-            }else {
+            }else{
                 let value = resp.result.value;
                 // print(resp)
                 print(value)
@@ -31,7 +31,6 @@ class AccessRemoteInfo: NSObject {
                     //var title = dataObj["title"]
                     //var
                 }
-             
             }
         }
         return true

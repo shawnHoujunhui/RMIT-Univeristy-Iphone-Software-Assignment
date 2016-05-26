@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		28E5C09F3186304627D5CD2A /* Pods_RMIT_CINEMA_Version2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F50454A96FA79CEF6223DFC /* Pods_RMIT_CINEMA_Version2_0.framework */; };
-		291032B41CB676B40069C8A6 /* PersonalDetailsInfoProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291032B31CB676B40069C8A6 /* PersonalDetailsInfoProcessor.swift */; };
 		291A414E1CEB175500CEDB14 /* ExtendCustomKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291A414C1CEB175500CEDB14 /* ExtendCustomKeyboard.swift */; };
 		291A414F1CEB175500CEDB14 /* ExtendCustomKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291A414D1CEB175500CEDB14 /* ExtendCustomKeyboard.xib */; };
 		291D3D1A1CB7AAEE00427326 /* LoginPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291D3D191CB7AAEE00427326 /* LoginPageUITests.swift */; };
@@ -20,6 +19,9 @@
 		292C191F1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 292C191D1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodeld */; };
 		292C19221CDD76BF00D342FA /* RegisterData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 292C19201CDD76BF00D342FA /* RegisterData.xcdatamodeld */; };
 		295377E81CED946F007C5BE5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295377E71CED946F007C5BE5 /* MapKit.framework */; };
+		295AFFCA1CF180B100AAF4F4 /* CompareCoreDataWithUserInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFC91CF180B100AAF4F4 /* CompareCoreDataWithUserInput.swift */; };
+		295AFFCC1CF195A100AAF4F4 /* MapDetailtexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AFFCB1CF195A100AAF4F4 /* MapDetailtexts.swift */; };
+		295AFFCE1CF1972100AAF4F4 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 295AFFCD1CF1972100AAF4F4 /* readme.txt */; };
 		2960ACDC1CE359C300CFEA44 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960ACDB1CE359C300CFEA44 /* TimePickerViewController.swift */; };
 		2960ACE51CE361D400CFEA44 /* PickerCellsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2960ACE41CE361D400CFEA44 /* PickerCellsController.m */; };
 		2960ACED1CE3636F00CFEA44 /* CityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960ACEC1CE3636F00CFEA44 /* CityPickerView.swift */; };
@@ -28,6 +30,8 @@
 		2960ACF31CE363E300CFEA44 /* AreaCitiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960ACF21CE363E300CFEA44 /* AreaCitiesModel.swift */; };
 		29632A991CEB03BA002CEB2D /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29632A981CEB03BA002CEB2D /* KeyboardViewController.swift */; };
 		29632A9D1CEB03BA002CEB2D /* RMIT_CINEMA_Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 29632A961CEB03BA002CEB2D /* RMIT_CINEMA_Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2972317B1CF04CDC00151886 /* FormValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2972317A1CF04CDC00151886 /* FormValidationTests.swift */; };
+		2972317D1CF05BEF00151886 /* DataInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2972317C1CF05BEF00151886 /* DataInfoTests.swift */; };
 		297C82F41CE23128009B1230 /* ShowMovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C82F31CE23128009B1230 /* ShowMovieDetailsViewController.swift */; };
 		297DA51C1CE0BDBE00E9AB62 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DA51B1CE0BDBE00E9AB62 /* MovieTableViewCell.swift */; };
 		298507801CE366A900A6BE30 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2985077F1CE366A900A6BE30 /* area.plist */; };
@@ -72,6 +76,14 @@
 		3A8D7B2D1CDFB09000F78B91 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D7B2B1CDFB09000F78B91 /* MovieInfo.swift */; };
 		3AA3561C1CE5D174006A4A0B /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA3561A1CE5D174006A4A0B /* placeholder.png */; };
 		3AA3561D1CE5D174006A4A0B /* failed.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA3561B1CE5D174006A4A0B /* failed.png */; };
+		3AD6C2FE1CEF14A7008B4276 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C2FC1CEF14A7008B4276 /* History+CoreDataProperties.swift */; };
+		3AD6C2FF1CEF14A7008B4276 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C2FD1CEF14A7008B4276 /* History.swift */; };
+		3AD6C3011CEF14C1008B4276 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C3001CEF14C1008B4276 /* HistoryModel.swift */; };
+		3AD6C3041CEF1558008B4276 /* Form+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C3021CEF1558008B4276 /* Form+CoreDataProperties.swift */; };
+		3AD6C3051CEF1558008B4276 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C3031CEF1558008B4276 /* Form.swift */; };
+		3AD6C3071CEF1582008B4276 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C3061CEF1582008B4276 /* CurrentUser.swift */; };
+		3AD6C3091CEF15BE008B4276 /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C3081CEF15BE008B4276 /* FormModel.swift */; };
+		3AD6C30B1CEF16B8008B4276 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C30A1CEF16B8008B4276 /* MovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,7 +125,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		291032B31CB676B40069C8A6 /* PersonalDetailsInfoProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDetailsInfoProcessor.swift; sourceTree = "<group>"; };
 		291A414C1CEB175500CEDB14 /* ExtendCustomKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendCustomKeyboard.swift; sourceTree = "<group>"; };
 		291A414D1CEB175500CEDB14 /* ExtendCustomKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExtendCustomKeyboard.xib; sourceTree = "<group>"; };
 		291D3D191CB7AAEE00427326 /* LoginPageUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageUITests.swift; sourceTree = "<group>"; };
@@ -125,6 +136,9 @@
 		292C191E1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RMIT_CINEMA_Version2.xcdatamodel; sourceTree = "<group>"; };
 		292C19211CDD76BF00D342FA /* RegisterData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RegisterData.xcdatamodel; sourceTree = "<group>"; };
 		295377E71CED946F007C5BE5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		295AFFC91CF180B100AAF4F4 /* CompareCoreDataWithUserInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareCoreDataWithUserInput.swift; sourceTree = "<group>"; };
+		295AFFCB1CF195A100AAF4F4 /* MapDetailtexts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetailtexts.swift; sourceTree = "<group>"; };
+		295AFFCD1CF1972100AAF4F4 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		2960ACCD1CE3595800CFEA44 /* RMIT_CINEMA_Version2.0-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RMIT_CINEMA_Version2.0-Bridging-Header.h"; sourceTree = "<group>"; };
 		2960ACDB1CE359C300CFEA44 /* TimePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
 		2960ACE01CE3618200CFEA44 /* PickerCellsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerCellsController.h; sourceTree = "<group>"; };
@@ -139,6 +153,8 @@
 		29632A961CEB03BA002CEB2D /* RMIT_CINEMA_Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RMIT_CINEMA_Keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		29632A981CEB03BA002CEB2D /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		29632A9A1CEB03BA002CEB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2972317A1CF04CDC00151886 /* FormValidationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidationTests.swift; sourceTree = "<group>"; };
+		2972317C1CF05BEF00151886 /* DataInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataInfoTests.swift; sourceTree = "<group>"; };
 		297C82F31CE23128009B1230 /* ShowMovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMovieDetailsViewController.swift; sourceTree = "<group>"; };
 		297DA51B1CE0BDBE00E9AB62 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		2985077F1CE366A900A6BE30 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
@@ -191,6 +207,14 @@
 		3A8D7B2B1CDFB09000F78B91 /* MovieInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
 		3AA3561A1CE5D174006A4A0B /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		3AA3561B1CE5D174006A4A0B /* failed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = failed.png; sourceTree = "<group>"; };
+		3AD6C2FC1CEF14A7008B4276 /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "History+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3AD6C2FD1CEF14A7008B4276 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		3AD6C3001CEF14C1008B4276 /* HistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
+		3AD6C3021CEF1558008B4276 /* Form+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Form+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3AD6C3031CEF1558008B4276 /* Form.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
+		3AD6C3061CEF1582008B4276 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		3AD6C3081CEF15BE008B4276 /* FormModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
+		3AD6C30A1CEF16B8008B4276 /* MovieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		89DF509EA981FAEC4FF9FA86 /* Pods-RMIT_CINEMA_Version2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMIT_CINEMA_Version2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-RMIT_CINEMA_Version2.0/Pods-RMIT_CINEMA_Version2.0.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +278,10 @@
 				3A8D7B2B1CDFB09000F78B91 /* MovieInfo.swift */,
 				29E275531CE1A3DD002D3E4A /* MovieHotTableViewCell.swift */,
 				29E275551CE1A96E002D3E4A /* MovieComingTableViewCell.swift */,
+				3AD6C2FC1CEF14A7008B4276 /* History+CoreDataProperties.swift */,
+				3AD6C2FD1CEF14A7008B4276 /* History.swift */,
+				3AD6C3001CEF14C1008B4276 /* HistoryModel.swift */,
+				3AD6C30A1CEF16B8008B4276 /* MovieModel.swift */,
 			);
 			name = MovieDetailsModel;
 			sourceTree = "<group>";
@@ -337,6 +365,7 @@
 		299ABB351CB4E9E90045BF44 = {
 			isa = PBXGroup;
 			children = (
+				295AFFCD1CF1972100AAF4F4 /* readme.txt */,
 				299ABB401CB4E9E90045BF44 /* RMIT_CINEMA_Version2.0 */,
 				299ABB551CB4E9EA0045BF44 /* RMIT_CINEMA_Version2.0Tests */,
 				299ABB601CB4E9EA0045BF44 /* RMIT_CINEMA_Version2.0UITests */,
@@ -382,6 +411,10 @@
 			isa = PBXGroup;
 			children = (
 				299ABB561CB4E9EA0045BF44 /* RMIT_CINEMA_Version2_0Tests.swift */,
+				295AFFC91CF180B100AAF4F4 /* CompareCoreDataWithUserInput.swift */,
+				2972317A1CF04CDC00151886 /* FormValidationTests.swift */,
+				2972317C1CF05BEF00151886 /* DataInfoTests.swift */,
+				295AFFCB1CF195A100AAF4F4 /* MapDetailtexts.swift */,
 				299ABB581CB4E9EA0045BF44 /* Info.plist */,
 			);
 			path = RMIT_CINEMA_Version2.0Tests;
@@ -434,7 +467,10 @@
 		29A275D81CB65B1100BAF745 /* PersonalDetailsModel */ = {
 			isa = PBXGroup;
 			children = (
-				291032B31CB676B40069C8A6 /* PersonalDetailsInfoProcessor.swift */,
+				3AD6C3021CEF1558008B4276 /* Form+CoreDataProperties.swift */,
+				3AD6C3031CEF1558008B4276 /* Form.swift */,
+				3AD6C3061CEF1582008B4276 /* CurrentUser.swift */,
+				3AD6C3081CEF15BE008B4276 /* FormModel.swift */,
 			);
 			name = PersonalDetailsModel;
 			sourceTree = "<group>";
@@ -656,6 +692,7 @@
 				299ABB491CB4E9E90045BF44 /* Assets.xcassets in Resources */,
 				291F42C91CB56418007C2F61 /* HistoryMovieTableViewCell.xib in Resources */,
 				291F42B91CB55ED0007C2F61 /* MovieHistoryList.plist in Resources */,
+				295AFFCE1CF1972100AAF4F4 /* readme.txt in Resources */,
 				3AA3561C1CE5D174006A4A0B /* placeholder.png in Resources */,
 				298E2DA41CE4243800D9DDBC /* TicketsList.plist in Resources */,
 				298507801CE366A900A6BE30 /* area.plist in Resources */,
@@ -748,6 +785,7 @@
 				29FEF9D41CB4FD8C00CC034A /* LoginViewController.swift in Sources */,
 				291F42C11CB562F3007C2F61 /* HistoryMovieModel.swift in Sources */,
 				29DE30DE1CD21C0B00CE53FC /* MovieHotViewController.swift in Sources */,
+				3AD6C30B1CEF16B8008B4276 /* MovieModel.swift in Sources */,
 				29FEF9D61CB4FF9500CC034A /* RegisterViewController.swift in Sources */,
 				29E275561CE1A96E002D3E4A /* MovieComingTableViewCell.swift in Sources */,
 				3A8D7B2C1CDFB09000F78B91 /* MovieInfo+CoreDataProperties.swift in Sources */,
@@ -764,17 +802,24 @@
 				2960ACF31CE363E300CFEA44 /* AreaCitiesModel.swift in Sources */,
 				299D34121CE87ED300B780B2 /* UIphoto.swift in Sources */,
 				29CA467C1CB52189008062E3 /* TermsAndConditionsViewController.swift in Sources */,
+				3AD6C3051CEF1558008B4276 /* Form.swift in Sources */,
 				297DA51C1CE0BDBE00E9AB62 /* MovieTableViewCell.swift in Sources */,
 				2960ACED1CE3636F00CFEA44 /* CityPickerView.swift in Sources */,
 				299ABB721CB4F45D0045BF44 /* FirstViewController.swift in Sources */,
+				3AD6C3071CEF1582008B4276 /* CurrentUser.swift in Sources */,
+				3AD6C3041CEF1558008B4276 /* Form+CoreDataProperties.swift in Sources */,
 				299ABB441CB4E9E90045BF44 /* ViewController.swift in Sources */,
 				29CA46781CB52135008062E3 /* SettingViewController.swift in Sources */,
 				29F4C9471CE99895004E00C5 /* TicketPrintViewController.swift in Sources */,
 				29CA467E1CB52193008062E3 /* FeedbackViewController.swift in Sources */,
 				29CA46721CB51215008062E3 /* HelpPageViewController.swift in Sources */,
+				3AD6C2FE1CEF14A7008B4276 /* History+CoreDataProperties.swift in Sources */,
+				3AD6C2FF1CEF14A7008B4276 /* History.swift in Sources */,
 				299ABB421CB4E9E90045BF44 /* AppDelegate.swift in Sources */,
 				2994067A1CE7287400ECD722 /* MapViewController.swift in Sources */,
 				29CA46761CB5174B008062E3 /* ForgetDetailsViewController.swift in Sources */,
+				3AD6C3091CEF15BE008B4276 /* FormModel.swift in Sources */,
+				3AD6C3011CEF14C1008B4276 /* HistoryModel.swift in Sources */,
 				292C191F1CDD76A600D342FA /* RMIT_CINEMA_Version2.xcdatamodeld in Sources */,
 				3A45C8271CDF51900006EE71 /* AccessRemoteInfo.swift in Sources */,
 				29CA46741CB51279008062E3 /* PersonalDetailsViewController.swift in Sources */,
@@ -782,7 +827,6 @@
 				291F42C81CB56418007C2F61 /* HistoryMovieTableViewCell.swift in Sources */,
 				2960ACEF1CE363AC00CFEA44 /* AreaFactory.swift in Sources */,
 				29DE30DC1CD21BF800CE53FC /* MovieShowingViewController.swift in Sources */,
-				291032B41CB676B40069C8A6 /* PersonalDetailsInfoProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +834,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2972317B1CF04CDC00151886 /* FormValidationTests.swift in Sources */,
+				2972317D1CF05BEF00151886 /* DataInfoTests.swift in Sources */,
+				295AFFCA1CF180B100AAF4F4 /* CompareCoreDataWithUserInput.swift in Sources */,
+				295AFFCC1CF195A100AAF4F4 /* MapDetailtexts.swift in Sources */,
 				299ABB571CB4E9EA0045BF44 /* RMIT_CINEMA_Version2_0Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

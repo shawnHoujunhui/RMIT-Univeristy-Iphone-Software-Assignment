@@ -121,7 +121,7 @@ class CityPickerView: UIPickerView,UIPickerViewDelegate, UIPickerViewDataSource 
         return number;
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        var text : String = "请选择"
+        var text : String = "please choose"
         switch (component) {
         case 0:
             let currAreaModel : AreaModel = dataArray[row] as! AreaModel

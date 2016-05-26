@@ -9,12 +9,12 @@
 import UIKit
 
 class PersonalDetailsViewController: UIViewController {
-
+    
     
     @IBOutlet weak var emailAddress: UILabel!
     @IBOutlet weak var firstname: UILabel!
     @IBOutlet weak var lastname: UILabel!
-    
+    let currentUser = CurrentUser.sharedInstance
     
     // Once the bar button is clicked Back to home page
     @IBAction func homeBtAction(sender: AnyObject) {
@@ -24,9 +24,9 @@ class PersonalDetailsViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.emailAddress.text = NSUserDefaults.standardUserDefaults().valueForKey("EmailAddress") as! String!
-        self.firstname.text = NSUserDefaults.standardUserDefaults().valueForKey("FirstName") as! String!
-        self.lastname.text = NSUserDefaults.standardUserDefaults().valueForKey("LastName") as! String!
+        self.emailAddress.text = currentUser.username
+        self.firstname.text = currentUser.firstname
+        self.lastname.text = currentUser.lastname
         // Do any additional setup after loading the view.
     }
     
@@ -37,7 +37,7 @@ class PersonalDetailsViewController: UIViewController {
     
     // Warning - Store the user details in Xcode (Not working Now)
     func changeLabelCont(){
-       
+        
         
     }
     /*

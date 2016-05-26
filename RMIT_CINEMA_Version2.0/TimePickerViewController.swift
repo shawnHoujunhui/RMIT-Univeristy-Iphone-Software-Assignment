@@ -27,7 +27,11 @@ class TimePickerViewController: UIViewController,UITableViewDataSource, UITableV
     var ftime:String?
     var freleasedate:String?
     var fimage:UIImage?
-
+    
+    
+    let historyModel = HistoryModel.sharedInstance
+    let currentUser = CurrentUser.sharedInstance
+    
     @IBOutlet weak var filmname: UILabel!
     @IBOutlet weak var filmtime: UILabel!
     @IBOutlet weak var filmreleasedate: UILabel!
@@ -215,6 +219,7 @@ class TimePickerViewController: UIViewController,UITableViewDataSource, UITableV
       //  let home = homeButton.instantiateViewControllerWithIdentifier("TicketPrintViewController")
       //  self.presentViewController(home,animated:true, completion:nil)
         self.performSegueWithIdentifier("ticketDetails", sender: self)
+        
     }
 //
 //    
@@ -230,16 +235,13 @@ class TimePickerViewController: UIViewController,UITableViewDataSource, UITableV
                 let running = ftime
                 let image = fimage
              //   let ticketnum = goodsSum
-
-                    
-
-
-               
                 details.cinemaTitle = title
                 details.cinemaRunning = running
                 details.cinemaReleaseDate = release
                 details.cinemaImage = image
                 details.cinemaTotalPrice = priceSum.text
+                // save to history 
+                self.historyModel.saveHistory(self.currentUser.username!, movieName: title!, price: priceSum.text!, time: running!)
                 
                 
             }

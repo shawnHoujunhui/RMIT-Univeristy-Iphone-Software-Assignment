@@ -11,7 +11,7 @@ import CoreData
 
 
 class RegisterViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
-   
+    
     var results: NSArray?
     
     @IBOutlet weak var firstnameTextField: UITextField!
@@ -21,8 +21,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UITableView
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var joinButton: UIButton!
     // Store personal details
-   
+    
     @IBOutlet weak var table: UITableView!
+    let model = FormModel.sharedInstance
+    let currentUser = CurrentUser.sharedInstance
     
     // This is called when the user tap the return button on the keyborad
     // Once we tap the return of keyborad, the keyboard will be dismissed
@@ -51,7 +53,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UITableView
         let back1 = backButton1.instantiateViewControllerWithIdentifier("first")
         self.presentViewController(back1,animated:true, completion:nil)
     }
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,11 +65,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UITableView
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
         
+        
         // disable join button
         self.joinButton.disable()
         // Do any additional setup after loading the view.
+        model.getForms()
     }
- 
+    
     
     
     //  Checking the content of textfield
@@ -87,31 +91,21 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UITableView
     let EmailAddress = ""
     @IBAction func joinButtonAction(sender: AnyObject) {
         
-        // coredata details
-        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context: NSManagedObjectContext = appDel.managedObjectContext
-        let cell = NSEntityDescription.insertNewObjectForEntityForName("Form", inManagedObjectContext:  context)
-        cell.setValue(firstnameTextField.text, forKey: "firstname")
-        cell.setValue(lastnameTextField.text, forKey: "lastname")
-        cell.setValue(emailAddressTextField.text, forKey: "emailaddress")
-        cell.setValue(passwordTextField.text, forKey: "password")
-      
-        
-        if self.firstnameTextField.validateFirstName() && self.lastnameTextField.validateLastName() && self.emailAddressTextField.validateEmail() &&
-            self.passwordTextField.validatePassword() && self.confirmPasswordTextField.validatePassword(){
+        if self.firstnameTextField.validateFirstName() && self.lastnameTextField.validateLastName() && self.emailAddressTextField.validateEmail() && !self.emailAddressTextField.validateEmailVal() &&
+            self.passwordTextField.validatePassword() && self.confirmPasswordTextField.validatePassword()
+            && (self.passwordTextField.text == self.confirmPasswordTextField.text){
+            
+            model.saveForm(self.emailAddressTextField.text!, password: self.passwordTextField.text!, firstname: self.firstnameTextField.text!, lastname: self.lastnameTextField.text!)
+            currentUser.firstname = self.firstnameTextField.text
+            currentUser.lastname = self.lastnameTextField.text
+            currentUser.username = self.emailAddressTextField.text
+            currentUser.password = self.passwordTextField.text
+            
             let homeButton = UIStoryboard(name: "Main", bundle: nil)
             let home2 = homeButton.instantiateViewControllerWithIdentifier("HomePageViewController")
             self.presentViewController(home2, animated: true, completion: nil)
             
-            // save the context
-            do{
-                try context.save()
-            }catch{
-                
-            }
-            self.loadTable()
-            self.table.reloadData()
-         
+            
             
             
             
@@ -140,7 +134,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UITableView
         self.presentViewController(alc, animated: true, completion: nil)
     }
     
-
+    
     //MARK: - Tableview Delegate & Datasource
     func tableView(tableView:UITableView, numberOfRowsInSection section:Int) -> Int
     {

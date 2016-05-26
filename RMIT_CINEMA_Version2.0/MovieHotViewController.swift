@@ -18,7 +18,7 @@ class MovieHotViewController: UIViewController, UITextFieldDelegate, UITableView
     var moviedb:[MovieInfo] = []
     // set up image dic
     var posterdic:[Int:UIImage] = [:]
-    
+    let movieModel = MovieModel.sharedInstance
     
     var refreshControl = UIRefreshControl()
     //create a mutable array
@@ -33,7 +33,7 @@ class MovieHotViewController: UIViewController, UITextFieldDelegate, UITableView
         self.saveMovieData()
         self.loadTable()
         self.table.reloadData()
-        
+        self.movieModel.getMovies()
         refreshControl.addTarget(self, action: #selector(MovieHotViewController.refreshData),
                                  forControlEvents: UIControlEvents.ValueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: "refresh")
@@ -91,23 +91,11 @@ class MovieHotViewController: UIViewController, UITextFieldDelegate, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         
-        //        // reuse
-        //       let movieCell:MovieTableViewCell =  tableView.dequeueReusableCellWithIdentifier("moviecell", forIndexPath: indexPath) as! MovieTableViewCell
-        //        movieCell.selectionStyle = UITableViewCellSelectionStyle.None
-        //        let model = modelArray[indexPath.row] as! MovieInfo
-        //        movieCell.moviename.text = model.title
-        //        movieCell.moviereleasedate.text = model.releaseDate
-        //        movieCell.movierunningtime.text = model.runtime
-        //        return movieCell
-        //
+        //  reuse
         let cell: MovieHotTableViewCell = tableView.dequeueReusableCellWithIdentifier("moviecell1", forIndexPath: indexPath) as! MovieHotTableViewCell
-        // let aux = results![indexPath.row] as! NSManagedObject
-        //        cell.moviename!.text = aux.valueForKey("title") as? String
-        //        cell.moviereleasedate!.text = aux.valueForKey("releaseDate") as? String
-        //        cell.movierunningtime!.text = aux.valueForKey("runtime") as? String
-        //        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         let moviedb = results as! [MovieInfo]
         let movie = moviedb[indexPath.row]
+        let poster = movie.poster
         cell.moviename!.text = moviedb[indexPath.row].title
         cell.moviereleasedate!.text = movie.releaseDate
         cell.movierunningtime!.text = movie.runtime
@@ -119,7 +107,7 @@ class MovieHotViewController: UIViewController, UITextFieldDelegate, UITableView
         let indicator = cell.accessoryView as! UIActivityIndicatorView
         indicator.startAnimating()
         dispatch_async(dispatch_get_main_queue(), {
-            let urlStr = NSURL(string: movie.poster!)
+            let urlStr = NSURL(string: poster!)
             let imageData = NSData(contentsOfURL: urlStr!)
             dispatch_async(dispatch_get_main_queue(), {
                 indicator.stopAnimating()
@@ -219,28 +207,10 @@ class MovieHotViewController: UIViewController, UITextFieldDelegate, UITableView
                 print(error)
             }else {
                 let value = resp.result.value
-                // print(resp)
-                print(value)
-                
                 
                 let output = JSON(value!)
                 if(output["results"].count > 0){
-                    do{
-                        let fetchRequest = NSFetchRequest(entityName:"MovieInfo")
-                        
-                        let temp =
-                            try context.executeFetchRequest(fetchRequest)
-                        let delMovieArray = temp as! [MovieInfo]
-                        
-                        if delMovieArray.count > 0{
-                            for delMovie in delMovieArray{
-                                context.deleteObject(delMovie)
-                            }
-                        }
-                        
-                    }catch{
-                        
-                    }
+                    self.movieModel.clearData()
                     for i in 0...output["results"].count - 1 {
                         let data = NSEntityDescription.insertNewObjectForEntityForName("MovieInfo", inManagedObjectContext:  context)
                         var dataObj = output["results"][i]

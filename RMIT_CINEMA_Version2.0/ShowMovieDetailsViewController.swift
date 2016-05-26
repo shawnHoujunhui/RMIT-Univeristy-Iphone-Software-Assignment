@@ -65,28 +65,8 @@ class ShowMovieDetailsViewController: UIViewController{
                 details.ftime = runningTime
                 details.fimage = image
                 details.freleasedate = releaseDate
-            
             }
-        
         }
-        
-//        let company = moviedb[indexPath.row].companies
-//        //        let country = moviedb[indexPath.row].contries
-//        let genre = moviedb[indexPath.row].genres
-//        let status = moviedb[indexPath.row].status
-//        let releaseDate = moviedb[indexPath.row].releaseDate
-        
-//        let overview = moviedb[indexPath.row].overview
-        
-//        let details = segue.destinationViewController as! TimePickerViewController
-        
-//        details.movieCompanies = company
-//        //        details.movieCountries = country
-//        details.movieGenres = genre
-//        details.movieStatuses = status
-        
-//        details.movieReleaseDate = releaseDate
-//        details.movieoverview = overview
         
     }
 

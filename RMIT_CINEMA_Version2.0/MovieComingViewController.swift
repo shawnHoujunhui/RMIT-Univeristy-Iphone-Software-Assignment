@@ -16,6 +16,8 @@ class MovieComingViewController: UIViewController, UITextFieldDelegate, UITableV
     var results: NSArray?
     var moviedb:[MovieInfo] = []
     
+    let movieModel = MovieModel.sharedInstance
+    
     // set up image dic
     var posterdic:[Int:UIImage] = [:]
     
@@ -48,30 +50,7 @@ class MovieComingViewController: UIViewController, UITextFieldDelegate, UITableV
         self.table.reloadData()
     }
     
-    //    func layoutViewControl(){
-    //
-    //        //register cell
-    //        table.registerNib(UINib.init(nibName:"MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "moviecell")
-    //        // thake coredata url
-    //        let fileUrl = NSBundle.mainBundle().URLForResource("RegisterData", withExtension: "momd")!
-    //
-    //        let dataArray = NSArray(contentsOfURL: fileUrl)
-    //
-    //        for dic in dataArray!{
-    //            //create object
-    //            let dataModel = MovieInfo()
-    //
-    //            let dictionary: Dictionary<String,AnyObject> = dic as! Dictionary
-    //
-    //            // data model
-    //            dataModel.setValuesForKeysWithDictionary(dictionary)
-    //
-    //            // add to array
-    //            modelArray.addObject(dataModel)
-    //
-    //        }
-    //
-    //    }
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return results!.count
     }
@@ -79,23 +58,11 @@ class MovieComingViewController: UIViewController, UITextFieldDelegate, UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         
-        //        // reuse
-        //       let movieCell:MovieTableViewCell =  tableView.dequeueReusableCellWithIdentifier("moviecell", forIndexPath: indexPath) as! MovieTableViewCell
-        //        movieCell.selectionStyle = UITableViewCellSelectionStyle.None
-        //        let model = modelArray[indexPath.row] as! MovieInfo
-        //        movieCell.moviename.text = model.title
-        //        movieCell.moviereleasedate.text = model.releaseDate
-        //        movieCell.movierunningtime.text = model.runtime
-        //        return movieCell
-        //
+        // reuse
         let cell: MovieComingTableViewCell = tableView.dequeueReusableCellWithIdentifier("moviecell2", forIndexPath: indexPath) as! MovieComingTableViewCell
-        // let aux = results![indexPath.row] as! NSManagedObject
-        //        cell.moviename!.text = aux.valueForKey("title") as? String
-        //        cell.moviereleasedate!.text = aux.valueForKey("releaseDate") as? String
-        //        cell.movierunningtime!.text = aux.valueForKey("runtime") as? String
-        //        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         let moviedb = results as! [MovieInfo]
         let movie = moviedb[indexPath.row]
+        let poster = movie.poster
         cell.moviename!.text = moviedb[indexPath.row].title
         cell.moviereleasedate!.text = movie.releaseDate
         cell.movierunningtime!.text = movie.runtime
@@ -107,7 +74,7 @@ class MovieComingViewController: UIViewController, UITextFieldDelegate, UITableV
         let indicator = cell.accessoryView as! UIActivityIndicatorView
         indicator.startAnimating()
         dispatch_async(dispatch_get_main_queue(), {
-            let urlStr = NSURL(string: movie.poster!)
+            let urlStr = NSURL(string: poster!)
             let imageData = NSData(contentsOfURL: urlStr!)
             dispatch_async(dispatch_get_main_queue(), {
                 indicator.stopAnimating()
@@ -201,8 +168,7 @@ class MovieComingViewController: UIViewController, UITextFieldDelegate, UITableV
     }
     
     func saveMovieData(){
-        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context: NSManagedObjectContext = appDel.managedObjectContext
+        let context = movieModel.context
         let mainUrl = "http://image.tmdb.org/t/p/w500"
         
         let urlString = "https://api.themoviedb.org/3/movie/now_playing"
@@ -220,22 +186,7 @@ class MovieComingViewController: UIViewController, UITextFieldDelegate, UITableV
                 
                 let output = JSON(value!)
                 if(output["results"].count > 0){
-                    do{
-                        let fetchRequest = NSFetchRequest(entityName:"MovieInfo")
-                        
-                        let temp =
-                            try context.executeFetchRequest(fetchRequest)
-                        let delMovieArray = temp as! [MovieInfo]
-                        
-                        if delMovieArray.count > 0{
-                            for delMovie in delMovieArray{
-                                context.deleteObject(delMovie)
-                            }
-                        }
-                        
-                    }catch{
-                        
-                    }
+                    self.movieModel.clearData()
                     for i in 0...output["results"].count - 1 {
                         let data = NSEntityDescription.insertNewObjectForEntityForName("MovieInfo", inManagedObjectContext:  context)
                         var dataObj = output["results"][i]
@@ -304,11 +255,7 @@ class MovieComingViewController: UIViewController, UITextFieldDelegate, UITableV
                                 
                                 
                                 if(i == output["results"].count - 1){
-                                    do{
-                                        try context.save()
-                                    }catch{
-                                        
-                                    }
+                                    self.movieModel.clearData()
                                     self.loadTable()
                                     self.table.reloadData()
                                 }

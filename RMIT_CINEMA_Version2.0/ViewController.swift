@@ -40,8 +40,74 @@ extension UITextField {
     func validateEmail() -> Bool {
         return self.validate("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}")
     }
+    
+    // check the database whether we have such user name in the database
+    func validateEmailVal() -> Bool {
+        var checkingResult = false
+        checkingResult = self.validate("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}")
+        if(checkingResult == false){
+            return checkingResult
+        }
+        
+        checkingResult = false
+        
+        // get personal information
+        let model = FormModel.sharedInstance
+        
+        if(model.forms.count == 0){
+            model.getForms()
+        }
+        if model.forms.count > 0{
+            for currentInfo in model.forms{
+                if self.text == currentInfo.emailaddress{
+                    checkingResult = true
+                    break
+                }
+            }
+        }else{
+            return checkingResult
+        }
+        
+        
+        return checkingResult
+    }
     func validatePassword() -> Bool {
         return self.validate("^[A-Z0-9a-z]{6,18}")
+    }
+    
+    func validatePasswordVal(email:String) -> Bool {
+        var checkingResult = false
+        checkingResult = self.validate("^[A-Z0-9a-z]{6,18}")
+        if(checkingResult == false ){
+            return checkingResult
+        }
+        checkingResult = false
+        let model = FormModel.sharedInstance
+        if(model.forms.count == 0){
+            model.getForms()
+        }
+        if model.forms.count > 0{
+            for currentInfo in model.forms{
+                if(email == currentInfo.emailaddress){
+                    if self.text == currentInfo.password{
+                        let currentUser = CurrentUser.sharedInstance
+                        currentUser.firstname = currentInfo.firstname
+                        currentUser.lastname = currentInfo.lastname
+                        currentUser.password = currentInfo.password
+                        currentUser.username = currentInfo.emailaddress
+                        checkingResult = true
+                        break
+                    }else{
+                        checkingResult = false
+                        break
+                    }
+                }
+            }
+        }else{
+            return checkingResult
+        }
+        
+        return checkingResult
     }
 }
 
@@ -56,13 +122,19 @@ class ViewController: UIViewController, UIScrollViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // "If your app is already in the foreground, iOS does not show the notification."
+        let notification = UILocalNotification()
+        notification.fireDate = NSDate().dateByAddingTimeInterval(10)
+        notification.alertBody = "You have one Movie Session Today"
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+
+        
+        
         // Welcome Page with 5 images - referenced page
         pageControl.center = CGPointMake(self.view.frame.width/2,self.view.frame.height-30)
         pageControl.currentPageIndicatorTintColor = UIColor.redColor()
         pageControl.pageIndicatorTintColor = UIColor.whiteColor()
         pageControl.numberOfPages = 5
-        
-        
         
         // Set up UI Scroll frame
         scrollView.frame = self.view.bounds
@@ -85,10 +157,9 @@ class ViewController: UIViewController, UIScrollViewDelegate{
             scrollView.addSubview(imageView)
             self.view.addSubview(pageControl)
         }
-        
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         let index = Int(scrollView.contentOffset.x/self.view.frame.size.width)
         pageControl.currentPage = index
